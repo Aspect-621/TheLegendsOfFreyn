@@ -81,32 +81,45 @@
             pictureBox47 = new PictureBox();
             mob1 = new PictureBox();
             pictureBox48 = new PictureBox();
-            panel1 = new Panel();
-            select1 = new Label();
-            itemlb9 = new Label();
-            itemlb7 = new Label();
-            itemlb8 = new Label();
-            itemlb6 = new Label();
-            itemlb5 = new Label();
-            itemlb4 = new Label();
-            itemlb3 = new Label();
-            itemlb2 = new Label();
-            itemlb1 = new Label();
-            More = new PictureBox();
-            Less = new PictureBox();
-            UseItem = new Label();
-            Select = new PictureBox();
-            pictureBox49 = new PictureBox();
-            item9 = new PictureBox();
-            item8 = new PictureBox();
-            item7 = new PictureBox();
-            item6 = new PictureBox();
-            item5 = new PictureBox();
-            item4 = new PictureBox();
-            item3 = new PictureBox();
-            item2 = new PictureBox();
-            item1 = new PictureBox();
             OPEN = new PictureBox();
+            panel2 = new Panel();
+            GoldPrint = new Label();
+            Health = new PictureBox();
+            Stat5 = new Label();
+            Stat4 = new Label();
+            Stat3 = new Label();
+            Stat2 = new Label();
+            Stat1 = new Label();
+            Idle = new PictureBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label11 = new Label();
+            item1 = new PictureBox();
+            item2 = new PictureBox();
+            item3 = new PictureBox();
+            item4 = new PictureBox();
+            item5 = new PictureBox();
+            item6 = new PictureBox();
+            item7 = new PictureBox();
+            item8 = new PictureBox();
+            item9 = new PictureBox();
+            pictureBox49 = new PictureBox();
+            UseItem = new Label();
+            Less = new PictureBox();
+            More = new PictureBox();
+            itemlb1 = new Label();
+            itemlb2 = new Label();
+            itemlb3 = new Label();
+            itemlb4 = new Label();
+            itemlb5 = new Label();
+            itemlb6 = new Label();
+            itemlb8 = new Label();
+            itemlb7 = new Label();
+            itemlb9 = new Label();
+            select1 = new Label();
+            panel1 = new Panel();
+            Select = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -159,21 +172,24 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox47).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox48).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)More).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Less).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Select).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox49).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)item1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)item9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox49).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Less).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)More).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Select).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -600,11 +616,419 @@
             pictureBox48.TabIndex = 73;
             pictureBox48.TabStop = false;
             // 
+            // OPEN
+            // 
+            OPEN.Location = new Point(1337, 12);
+            OPEN.Name = "OPEN";
+            OPEN.Size = new Size(75, 75);
+            OPEN.TabIndex = 75;
+            OPEN.TabStop = false;
+            OPEN.Click += OPEN_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(GoldPrint);
+            panel2.Controls.Add(Health);
+            panel2.Controls.Add(Stat5);
+            panel2.Controls.Add(Stat4);
+            panel2.Controls.Add(Stat3);
+            panel2.Controls.Add(Stat2);
+            panel2.Controls.Add(Stat1);
+            panel2.Controls.Add(Idle);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label11);
+            panel2.Location = new Point(-3, -1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(265, 160);
+            panel2.TabIndex = 76;
+            // 
+            // GoldPrint
+            // 
+            GoldPrint.AutoSize = true;
+            GoldPrint.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GoldPrint.ForeColor = Color.Black;
+            GoldPrint.Location = new Point(154, 119);
+            GoldPrint.Name = "GoldPrint";
+            GoldPrint.Size = new Size(58, 19);
+            GoldPrint.TabIndex = 29;
+            GoldPrint.Text = "label8";
+            GoldPrint.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Health
+            // 
+            Health.BackColor = Color.Transparent;
+            Health.BackgroundImageLayout = ImageLayout.Stretch;
+            Health.Image = Properties.Resources._4_1;
+            Health.Location = new Point(8, 119);
+            Health.Name = "Health";
+            Health.Size = new Size(103, 19);
+            Health.SizeMode = PictureBoxSizeMode.StretchImage;
+            Health.TabIndex = 30;
+            Health.TabStop = false;
+            // 
+            // Stat5
+            // 
+            Stat5.AutoSize = true;
+            Stat5.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat5.ForeColor = Color.Black;
+            Stat5.Location = new Point(181, 87);
+            Stat5.Name = "Stat5";
+            Stat5.Size = new Size(58, 19);
+            Stat5.TabIndex = 28;
+            Stat5.Text = "label8";
+            Stat5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat4
+            // 
+            Stat4.AutoSize = true;
+            Stat4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat4.ForeColor = Color.Black;
+            Stat4.Location = new Point(181, 68);
+            Stat4.Name = "Stat4";
+            Stat4.Size = new Size(58, 19);
+            Stat4.TabIndex = 27;
+            Stat4.Text = "label7";
+            Stat4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat3
+            // 
+            Stat3.AutoSize = true;
+            Stat3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat3.ForeColor = Color.Black;
+            Stat3.Location = new Point(181, 49);
+            Stat3.Name = "Stat3";
+            Stat3.Size = new Size(58, 19);
+            Stat3.TabIndex = 26;
+            Stat3.Text = "label6";
+            Stat3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat2
+            // 
+            Stat2.AutoSize = true;
+            Stat2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat2.ForeColor = Color.Black;
+            Stat2.Location = new Point(181, 30);
+            Stat2.Name = "Stat2";
+            Stat2.Size = new Size(58, 19);
+            Stat2.TabIndex = 25;
+            Stat2.Text = "label5";
+            Stat2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat1
+            // 
+            Stat1.AutoSize = true;
+            Stat1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat1.ForeColor = Color.Black;
+            Stat1.Location = new Point(181, 11);
+            Stat1.Name = "Stat1";
+            Stat1.Size = new Size(58, 19);
+            Stat1.TabIndex = 24;
+            Stat1.Text = "label1";
+            Stat1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Idle
+            // 
+            Idle.BackColor = Color.White;
+            Idle.BackgroundImageLayout = ImageLayout.Stretch;
+            Idle.Image = Properties.Resources.mage_walk_rigth;
+            Idle.Location = new Point(17, 29);
+            Idle.Name = "Idle";
+            Idle.Size = new Size(76, 71);
+            Idle.SizeMode = PictureBoxSizeMode.StretchImage;
+            Idle.TabIndex = 24;
+            Idle.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(358, 542);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 19);
+            label2.TabIndex = 22;
+            label2.Text = "label1";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(100, 542);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 19);
+            label3.TabIndex = 21;
+            label3.Text = "label1";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(229, 542);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 19);
+            label4.TabIndex = 20;
+            label4.Text = "label1";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.WhiteSmoke;
+            label11.Location = new Point(195, 561);
+            label11.Name = "label11";
+            label11.Size = new Size(134, 27);
+            label11.TabIndex = 11;
+            label11.Text = "USE ITEM";
+            // 
+            // item1
+            // 
+            item1.Location = new Point(98, 208);
+            item1.Name = "item1";
+            item1.Size = new Size(60, 63);
+            item1.TabIndex = 0;
+            item1.TabStop = false;
+            // 
+            // item2
+            // 
+            item2.Location = new Point(229, 208);
+            item2.Name = "item2";
+            item2.Size = new Size(60, 63);
+            item2.TabIndex = 1;
+            item2.TabStop = false;
+            // 
+            // item3
+            // 
+            item3.Location = new Point(356, 208);
+            item3.Name = "item3";
+            item3.Size = new Size(60, 63);
+            item3.TabIndex = 2;
+            item3.TabStop = false;
+            // 
+            // item4
+            // 
+            item4.Location = new Point(98, 343);
+            item4.Name = "item4";
+            item4.Size = new Size(60, 63);
+            item4.TabIndex = 3;
+            item4.TabStop = false;
+            // 
+            // item5
+            // 
+            item5.Location = new Point(229, 343);
+            item5.Name = "item5";
+            item5.Size = new Size(60, 63);
+            item5.TabIndex = 4;
+            item5.TabStop = false;
+            // 
+            // item6
+            // 
+            item6.Location = new Point(356, 343);
+            item6.Name = "item6";
+            item6.Size = new Size(71, 63);
+            item6.TabIndex = 5;
+            item6.TabStop = false;
+            // 
+            // item7
+            // 
+            item7.Location = new Point(98, 473);
+            item7.Name = "item7";
+            item7.Size = new Size(60, 63);
+            item7.TabIndex = 6;
+            item7.TabStop = false;
+            // 
+            // item8
+            // 
+            item8.Location = new Point(229, 473);
+            item8.Name = "item8";
+            item8.Size = new Size(60, 63);
+            item8.TabIndex = 7;
+            item8.TabStop = false;
+            // 
+            // item9
+            // 
+            item9.Location = new Point(356, 467);
+            item9.Name = "item9";
+            item9.Size = new Size(71, 63);
+            item9.TabIndex = 8;
+            item9.TabStop = false;
+            // 
+            // pictureBox49
+            // 
+            pictureBox49.BackgroundImage = (Image)resources.GetObject("pictureBox49.BackgroundImage");
+            pictureBox49.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox49.Location = new Point(432, 3);
+            pictureBox49.Name = "pictureBox49";
+            pictureBox49.Size = new Size(60, 63);
+            pictureBox49.TabIndex = 9;
+            pictureBox49.TabStop = false;
+            pictureBox49.Click += pictureBox49_Click;
+            // 
+            // UseItem
+            // 
+            UseItem.AutoSize = true;
+            UseItem.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UseItem.ForeColor = Color.WhiteSmoke;
+            UseItem.Location = new Point(195, 561);
+            UseItem.Name = "UseItem";
+            UseItem.Size = new Size(134, 27);
+            UseItem.TabIndex = 11;
+            UseItem.Text = "USE ITEM";
+            UseItem.Click += UseItem_Click;
+            // 
+            // Less
+            // 
+            Less.Location = new Point(140, 87);
+            Less.Name = "Less";
+            Less.Size = new Size(28, 49);
+            Less.TabIndex = 12;
+            Less.TabStop = false;
+            Less.Click += Less_Click;
+            // 
+            // More
+            // 
+            More.Location = new Point(355, 87);
+            More.Name = "More";
+            More.Size = new Size(28, 49);
+            More.TabIndex = 13;
+            More.TabStop = false;
+            More.Click += More_Click;
+            // 
+            // itemlb1
+            // 
+            itemlb1.AutoSize = true;
+            itemlb1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb1.ForeColor = Color.White;
+            itemlb1.Location = new Point(100, 287);
+            itemlb1.Name = "itemlb1";
+            itemlb1.Size = new Size(58, 19);
+            itemlb1.TabIndex = 14;
+            itemlb1.Text = "label1";
+            itemlb1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb2
+            // 
+            itemlb2.AutoSize = true;
+            itemlb2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb2.ForeColor = Color.White;
+            itemlb2.Location = new Point(229, 287);
+            itemlb2.Name = "itemlb2";
+            itemlb2.Size = new Size(58, 19);
+            itemlb2.TabIndex = 15;
+            itemlb2.Text = "label1";
+            itemlb2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb3
+            // 
+            itemlb3.AutoSize = true;
+            itemlb3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb3.ForeColor = Color.White;
+            itemlb3.Location = new Point(356, 287);
+            itemlb3.Name = "itemlb3";
+            itemlb3.Size = new Size(58, 19);
+            itemlb3.TabIndex = 16;
+            itemlb3.Text = "label1";
+            itemlb3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb4
+            // 
+            itemlb4.AutoSize = true;
+            itemlb4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb4.ForeColor = Color.White;
+            itemlb4.Location = new Point(100, 418);
+            itemlb4.Name = "itemlb4";
+            itemlb4.Size = new Size(58, 19);
+            itemlb4.TabIndex = 17;
+            itemlb4.Text = "label1";
+            itemlb4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb5
+            // 
+            itemlb5.AutoSize = true;
+            itemlb5.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb5.ForeColor = Color.White;
+            itemlb5.Location = new Point(229, 418);
+            itemlb5.Name = "itemlb5";
+            itemlb5.Size = new Size(58, 19);
+            itemlb5.TabIndex = 18;
+            itemlb5.Text = "label1";
+            itemlb5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb6
+            // 
+            itemlb6.AutoSize = true;
+            itemlb6.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb6.ForeColor = Color.White;
+            itemlb6.Location = new Point(356, 418);
+            itemlb6.Name = "itemlb6";
+            itemlb6.Size = new Size(58, 19);
+            itemlb6.TabIndex = 19;
+            itemlb6.Text = "label1";
+            itemlb6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb8
+            // 
+            itemlb8.AutoSize = true;
+            itemlb8.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb8.ForeColor = Color.White;
+            itemlb8.Location = new Point(229, 542);
+            itemlb8.Name = "itemlb8";
+            itemlb8.Size = new Size(58, 19);
+            itemlb8.TabIndex = 20;
+            itemlb8.Text = "label1";
+            itemlb8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb7
+            // 
+            itemlb7.AutoSize = true;
+            itemlb7.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb7.ForeColor = Color.White;
+            itemlb7.Location = new Point(100, 542);
+            itemlb7.Name = "itemlb7";
+            itemlb7.Size = new Size(58, 19);
+            itemlb7.TabIndex = 21;
+            itemlb7.Text = "label1";
+            itemlb7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // itemlb9
+            // 
+            itemlb9.AutoSize = true;
+            itemlb9.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemlb9.ForeColor = Color.White;
+            itemlb9.Location = new Point(358, 542);
+            itemlb9.Name = "itemlb9";
+            itemlb9.Size = new Size(58, 19);
+            itemlb9.TabIndex = 22;
+            itemlb9.Text = "label1";
+            itemlb9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // select1
+            // 
+            select1.AutoSize = true;
+            select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            select1.ForeColor = Color.Black;
+            select1.Location = new Point(231, 91);
+            select1.Name = "select1";
+            select1.Size = new Size(58, 19);
+            select1.TabIndex = 23;
+            select1.Text = "label1";
+            select1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(Select);
             panel1.Controls.Add(select1);
             panel1.Controls.Add(itemlb9);
             panel1.Controls.Add(itemlb7);
@@ -618,7 +1042,6 @@
             panel1.Controls.Add(More);
             panel1.Controls.Add(Less);
             panel1.Controls.Add(UseItem);
-            panel1.Controls.Add(Select);
             panel1.Controls.Add(pictureBox49);
             panel1.Controls.Add(item9);
             panel1.Controls.Add(item8);
@@ -635,256 +1058,14 @@
             panel1.TabIndex = 74;
             panel1.Visible = false;
             // 
-            // select1
-            // 
-            select1.AutoSize = true;
-            select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            select1.ForeColor = Color.Black;
-            select1.Location = new Point(231, 91);
-            select1.Name = "select1";
-            select1.Size = new Size(58, 19);
-            select1.TabIndex = 23;
-            select1.Text = "label1";
-            select1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb9
-            // 
-            itemlb9.AutoSize = true;
-            itemlb9.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb9.ForeColor = Color.White;
-            itemlb9.Location = new Point(358, 542);
-            itemlb9.Name = "itemlb9";
-            itemlb9.Size = new Size(58, 19);
-            itemlb9.TabIndex = 22;
-            itemlb9.Text = "label1";
-            itemlb9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb7
-            // 
-            itemlb7.AutoSize = true;
-            itemlb7.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb7.ForeColor = Color.White;
-            itemlb7.Location = new Point(100, 542);
-            itemlb7.Name = "itemlb7";
-            itemlb7.Size = new Size(58, 19);
-            itemlb7.TabIndex = 21;
-            itemlb7.Text = "label1";
-            itemlb7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb8
-            // 
-            itemlb8.AutoSize = true;
-            itemlb8.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb8.ForeColor = Color.White;
-            itemlb8.Location = new Point(229, 542);
-            itemlb8.Name = "itemlb8";
-            itemlb8.Size = new Size(58, 19);
-            itemlb8.TabIndex = 20;
-            itemlb8.Text = "label1";
-            itemlb8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb6
-            // 
-            itemlb6.AutoSize = true;
-            itemlb6.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb6.ForeColor = Color.White;
-            itemlb6.Location = new Point(356, 418);
-            itemlb6.Name = "itemlb6";
-            itemlb6.Size = new Size(58, 19);
-            itemlb6.TabIndex = 19;
-            itemlb6.Text = "label1";
-            itemlb6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb5
-            // 
-            itemlb5.AutoSize = true;
-            itemlb5.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb5.ForeColor = Color.White;
-            itemlb5.Location = new Point(229, 418);
-            itemlb5.Name = "itemlb5";
-            itemlb5.Size = new Size(58, 19);
-            itemlb5.TabIndex = 18;
-            itemlb5.Text = "label1";
-            itemlb5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb4
-            // 
-            itemlb4.AutoSize = true;
-            itemlb4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb4.ForeColor = Color.White;
-            itemlb4.Location = new Point(100, 418);
-            itemlb4.Name = "itemlb4";
-            itemlb4.Size = new Size(58, 19);
-            itemlb4.TabIndex = 17;
-            itemlb4.Text = "label1";
-            itemlb4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb3
-            // 
-            itemlb3.AutoSize = true;
-            itemlb3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb3.ForeColor = Color.White;
-            itemlb3.Location = new Point(356, 287);
-            itemlb3.Name = "itemlb3";
-            itemlb3.Size = new Size(58, 19);
-            itemlb3.TabIndex = 16;
-            itemlb3.Text = "label1";
-            itemlb3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb2
-            // 
-            itemlb2.AutoSize = true;
-            itemlb2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb2.ForeColor = Color.White;
-            itemlb2.Location = new Point(229, 287);
-            itemlb2.Name = "itemlb2";
-            itemlb2.Size = new Size(58, 19);
-            itemlb2.TabIndex = 15;
-            itemlb2.Text = "label1";
-            itemlb2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // itemlb1
-            // 
-            itemlb1.AutoSize = true;
-            itemlb1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            itemlb1.ForeColor = Color.White;
-            itemlb1.Location = new Point(100, 287);
-            itemlb1.Name = "itemlb1";
-            itemlb1.Size = new Size(58, 19);
-            itemlb1.TabIndex = 14;
-            itemlb1.Text = "label1";
-            itemlb1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // More
-            // 
-            More.Location = new Point(355, 87);
-            More.Name = "More";
-            More.Size = new Size(28, 49);
-            More.TabIndex = 13;
-            More.TabStop = false;
-            More.Click += More_Click;
-            // 
-            // Less
-            // 
-            Less.Location = new Point(140, 87);
-            Less.Name = "Less";
-            Less.Size = new Size(28, 49);
-            Less.TabIndex = 12;
-            Less.TabStop = false;
-            Less.Click += Less_Click;
-            // 
-            // UseItem
-            // 
-            UseItem.AutoSize = true;
-            UseItem.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UseItem.ForeColor = Color.WhiteSmoke;
-            UseItem.Location = new Point(195, 561);
-            UseItem.Name = "UseItem";
-            UseItem.Size = new Size(134, 27);
-            UseItem.TabIndex = 11;
-            UseItem.Text = "USE ITEM";
-            UseItem.Click += UseItem_Click;
-            // 
             // Select
             // 
-            Select.BackgroundImageLayout = ImageLayout.Stretch;
-            Select.Location = new Point(200, 36);
+            Select.Location = new Point(206, 42);
             Select.Name = "Select";
-            Select.Size = new Size(129, 142);
-            Select.TabIndex = 10;
+            Select.Size = new Size(111, 128);
+            Select.SizeMode = PictureBoxSizeMode.StretchImage;
+            Select.TabIndex = 24;
             Select.TabStop = false;
-            // 
-            // pictureBox49
-            // 
-            pictureBox49.BackgroundImage = (Image)resources.GetObject("pictureBox49.BackgroundImage");
-            pictureBox49.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox49.Location = new Point(432, 3);
-            pictureBox49.Name = "pictureBox49";
-            pictureBox49.Size = new Size(60, 63);
-            pictureBox49.TabIndex = 9;
-            pictureBox49.TabStop = false;
-            pictureBox49.Click += pictureBox49_Click;
-            // 
-            // item9
-            // 
-            item9.Location = new Point(356, 467);
-            item9.Name = "item9";
-            item9.Size = new Size(71, 63);
-            item9.TabIndex = 8;
-            item9.TabStop = false;
-            // 
-            // item8
-            // 
-            item8.Location = new Point(229, 473);
-            item8.Name = "item8";
-            item8.Size = new Size(60, 63);
-            item8.TabIndex = 7;
-            item8.TabStop = false;
-            // 
-            // item7
-            // 
-            item7.Location = new Point(98, 473);
-            item7.Name = "item7";
-            item7.Size = new Size(60, 63);
-            item7.TabIndex = 6;
-            item7.TabStop = false;
-            // 
-            // item6
-            // 
-            item6.Location = new Point(356, 343);
-            item6.Name = "item6";
-            item6.Size = new Size(71, 63);
-            item6.TabIndex = 5;
-            item6.TabStop = false;
-            // 
-            // item5
-            // 
-            item5.Location = new Point(229, 343);
-            item5.Name = "item5";
-            item5.Size = new Size(60, 63);
-            item5.TabIndex = 4;
-            item5.TabStop = false;
-            // 
-            // item4
-            // 
-            item4.Location = new Point(98, 343);
-            item4.Name = "item4";
-            item4.Size = new Size(60, 63);
-            item4.TabIndex = 3;
-            item4.TabStop = false;
-            // 
-            // item3
-            // 
-            item3.Location = new Point(356, 208);
-            item3.Name = "item3";
-            item3.Size = new Size(60, 63);
-            item3.TabIndex = 2;
-            item3.TabStop = false;
-            // 
-            // item2
-            // 
-            item2.Location = new Point(229, 208);
-            item2.Name = "item2";
-            item2.Size = new Size(60, 63);
-            item2.TabIndex = 1;
-            item2.TabStop = false;
-            // 
-            // item1
-            // 
-            item1.Location = new Point(98, 208);
-            item1.Name = "item1";
-            item1.Size = new Size(60, 63);
-            item1.TabIndex = 0;
-            item1.TabStop = false;
-            // 
-            // OPEN
-            // 
-            OPEN.Location = new Point(1337, 12);
-            OPEN.Name = "OPEN";
-            OPEN.Size = new Size(75, 75);
-            OPEN.TabIndex = 75;
-            OPEN.TabStop = false;
-            OPEN.Click += OPEN_Click;
             // 
             // CrestfallCityForm10
             // 
@@ -893,6 +1074,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(panel2);
             Controls.Add(OPEN);
             Controls.Add(panel1);
             Controls.Add(mob1);
@@ -1004,22 +1186,26 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox47).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox48).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OPEN).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)item9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox49).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Less).EndInit();
+            ((System.ComponentModel.ISupportInitialize)More).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)More).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Less).EndInit();
             ((System.ComponentModel.ISupportInitialize)Select).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox49).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)item1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)OPEN).EndInit();
             ResumeLayout(false);
         }
 
@@ -1077,31 +1263,44 @@
         private PictureBox pictureBox47;
         private PictureBox mob1;
         private PictureBox pictureBox48;
-        private Panel panel1;
-        private Label select1;
-        private Label itemlb9;
-        private Label itemlb7;
-        private Label itemlb8;
-        private Label itemlb6;
-        private Label itemlb5;
-        private Label itemlb4;
-        private Label itemlb3;
-        private Label itemlb2;
-        private Label itemlb1;
-        private PictureBox More;
-        private PictureBox Less;
-        private Label UseItem;
-        private PictureBox Select;
-        private PictureBox pictureBox49;
-        private PictureBox item9;
-        private PictureBox item8;
-        private PictureBox item7;
-        private PictureBox item6;
-        private PictureBox item5;
-        private PictureBox item4;
-        private PictureBox item3;
-        private PictureBox item2;
-        private PictureBox item1;
         private PictureBox OPEN;
+        private Panel panel2;
+        private Label GoldPrint;
+        private PictureBox Health;
+        private Label Stat5;
+        private Label Stat4;
+        private Label Stat3;
+        private Label Stat2;
+        private Label Stat1;
+        private PictureBox Idle;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label11;
+        private PictureBox item1;
+        private PictureBox item2;
+        private PictureBox item3;
+        private PictureBox item4;
+        private PictureBox item5;
+        private PictureBox item6;
+        private PictureBox item7;
+        private PictureBox item8;
+        private PictureBox item9;
+        private PictureBox pictureBox49;
+        private Label UseItem;
+        private PictureBox Less;
+        private PictureBox More;
+        private Label itemlb1;
+        private Label itemlb2;
+        private Label itemlb3;
+        private Label itemlb4;
+        private Label itemlb5;
+        private Label itemlb6;
+        private Label itemlb8;
+        private Label itemlb7;
+        private Label itemlb9;
+        private Label select1;
+        private Panel panel1;
+        private PictureBox Select;
     }
 }

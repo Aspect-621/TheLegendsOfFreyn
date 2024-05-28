@@ -8,14 +8,14 @@ namespace RPG_FinalProj
         ///  The main entry point for the application.
         /// </summary>
         public static LocItems items { get; } = new LocItems();
-        public static quest1Dialogue QT { get; } = new quest1Dialogue();
+        public static quest1Dialogue dialogues { get; } = new quest1Dialogue();
         [STAThread]
         static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CrestfallCityForm2());
+            Application.Run(new charSelectForm());
         }
     }
 }

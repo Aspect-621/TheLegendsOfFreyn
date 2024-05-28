@@ -127,6 +127,39 @@ namespace RPG_FinalProj
                     {
                         return new int[] { 9, i };
                     }
+                    else if (mob[i] == "Jura1")
+                    {
+                        return new int[] { 10, i };
+                    }
+                    else if (mob[i] == "Crest1")
+                    {
+                        return new int[] { 11, i };
+                    }
+                    else if (mob[i] == "Crest2")
+                    {
+                        return new int[] { 12, i };
+                    }
+                    else if (mob[i] == "Crest3")
+                    {
+                        return new int[] { 13, i };
+                    }
+                    else if (mob[i] == "Crest4")
+                    {
+                        return new int[] { 14, i };
+                    }
+                    else if (mob[i] == "Puzzle1")
+                    {
+                        return new int[] { 15, i };
+                    }
+                    else if (mob[i] == "Slime King")
+                    {
+                        return new int[] { 16, i };
+                    }
+                    else if (mob[i] == "Puzzle2")
+                    {
+                        return new int[] { 17, i };
+                    }
+
 
                     break;
                 }
@@ -172,6 +205,38 @@ namespace RPG_FinalProj
                     {
                         return new int[] { 9, i };
                     }
+                    else if (mob[i] == "Jura1")
+                    {
+                        return new int[] { 10, i };
+                    }
+                    else if (mob[i] == "Crest1")
+                    {
+                        return new int[] { 11, i };
+                    }
+                    else if (mob[i] == "Crest2")
+                    {
+                        return new int[] { 12, i };
+                    }
+                    else if (mob[i] == "Crest3")
+                    {
+                        return new int[] { 13, i };
+                    }
+                    else if (mob[i] == "Crest4")
+                    {
+                        return new int[] { 14, i };
+                    }
+                    else if (mob[i] == "Puzzle1")
+                    {
+                        return new int[] { 15, i };
+                    }
+                    else if (mob[i] == "Slime King")
+                    {
+                        return new int[] { 16, i };
+                    }
+                    else if (mob[i] == "Puzzle2")
+                    {
+                        return new int[] { 17, i };
+                    }
                 }
 
                 else if (newPosition[3] >= moblocation[i, 1] - 5 && newPosition[3] <= moblocation[i, 3] + 5 &&
@@ -215,6 +280,38 @@ namespace RPG_FinalProj
                     {
                         return new int[] { 9, i };
                     }
+                    else if (mob[i] == "Jura1")
+                    {
+                        return new int[] { 10, i };
+                    }
+                    else if (mob[i] == "Crest1")
+                    {
+                        return new int[] { 11, i };
+                    }
+                    else if (mob[i] == "Crest2")
+                    {
+                        return new int[] { 12, i };
+                    }
+                    else if (mob[i] == "Crest3")
+                    {
+                        return new int[] { 13, i };
+                    }
+                    else if (mob[i] == "Crest4")
+                    {
+                        return new int[] { 14, i };
+                    }
+                    else if (mob[i] == "Puzzle1")
+                    {
+                        return new int[] { 15, i };
+                    }
+                    else if (mob[i] == "Slime King")
+                    {
+                        return new int[] { 16, i };
+                    }
+                    else if (mob[i] == "Puzzle2")
+                    {
+                        return new int[] { 17, i };
+                    }
                     break;
                 }
 
@@ -231,7 +328,7 @@ namespace RPG_FinalProj
                     {
                         return new int[] { 2, i };
                     }
-                    else if (mob[i] == "Wolf")
+                    else if (mob[i] == "wolf")
                     {
                         return new int[] { 3, i };
                     }
@@ -254,11 +351,42 @@ namespace RPG_FinalProj
                     else if (mob[i] == "Slime")
                     {
                         return new int[] { 8, i };
-
                     }
                     else if (mob[i] == "Merchant")
                     {
                         return new int[] { 9, i };
+                    }
+                    else if (mob[i] == "Jura1")
+                    {
+                        return new int[] { 10, i };
+                    }
+                    else if (mob[i] == "Crest1")
+                    {
+                        return new int[] { 11, i };
+                    }
+                    else if (mob[i] == "Crest2")
+                    {
+                        return new int[] { 12, i };
+                    }
+                    else if (mob[i] == "Crest3")
+                    {
+                        return new int[] { 13, i };
+                    }
+                    else if (mob[i] == "Crest4")
+                    {
+                        return new int[] { 14, i };
+                    }
+                    else if (mob[i] == "Puzzle1")
+                    {
+                        return new int[] { 15, i };
+                    }
+                    else if (mob[i] == "Slime King")
+                    {
+                        return new int[] { 16, i };
+                    }
+                    else if (mob[i] == "Puzzle2")
+                    {
+                        return new int[] { 17, i };
                     }
                     break;
                 }

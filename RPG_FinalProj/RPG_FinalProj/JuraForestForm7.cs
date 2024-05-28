@@ -5,9 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Numerics;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trial1_Movement_Classes_COMPROGPROJ;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Label = System.Windows.Forms.Label;
 
 namespace RPG_FinalProj
 {
@@ -16,18 +20,23 @@ namespace RPG_FinalProj
     public partial class JuraForestForm7 : Form
     {
         private readonly LocItems _items;
-
+        private readonly quest1Dialogue dialogues;
         int[,] obstacles = new int[40, 4];
         PictureBox[] obstacle = new PictureBox[40];
-        PictureBox[] mob = new PictureBox[2];
-        int[,] moblocation = new int[2, 4];
-        string[] mobnames = new string[2];
-        Label[] itemlb = new Label[9];
+        PictureBox[] mob = new PictureBox[3];
+        int[,] moblocation = new int[3, 4];
+        string[] mobnames = new string[3];
+        System.Windows.Forms.Label[] itemlb = new Label[9];
         PictureBox[] item = new PictureBox[9];
+        private Image[] assets = new Image[21];
+        private Image[] warrior = new Image[4];
+        private Image[] archer = new Image[4];
+        private Image[] mage = new Image[4];
         public JuraForestForm7()
         {
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
             item1.Tag = 0;
             item2.Tag = 1;
             item3.Tag = 2;
@@ -129,6 +138,59 @@ namespace RPG_FinalProj
 
         private void JuraForestForm7_Load(object sender, EventArgs e)
         {
+            warrior[2] = Properties.Resources.sword_walk_front;
+            warrior[1] = Properties.Resources.sword_walk_left;
+            warrior[0] = Properties.Resources.sword_walk_back;
+            warrior[3] = Properties.Resources.sword_walk_right;
+
+            archer[2] = Properties.Resources.archer_walk_front;
+            archer[1] = Properties.Resources.archer_walk_left;
+            archer[0] = Properties.Resources.archer_walk_back;
+            archer[3] = Properties.Resources.archer_walk_right;
+
+            mage[2] = Properties.Resources.mage_walk_front;
+            mage[1] = Properties.Resources.mage_walk_left;
+            mage[0] = Properties.Resources.mage_walk_back;
+            mage[3] = Properties.Resources.mage_walk_rigth;
+
+            print();
+            if (Program.items.classSelected == 1)
+            {
+                Player.Image = warrior[2];
+            }
+            else if (Program.items.classSelected == 2)
+            {
+                Player.Image = archer[2];
+            }
+            else if (Program.items.classSelected == 3)
+            {
+                Player.Image = mage[2];
+            }
+            Player.SizeMode = PictureBoxSizeMode.StretchImage;
+            Player.BackColor = Color.Transparent;
+            assets[0] = null;
+            assets[1] = Properties.Resources._0;
+            assets[2] = Properties.Resources._1;
+            assets[3] = Properties.Resources._2;
+            assets[4] = Properties.Resources._3;
+            assets[5] = Properties.Resources._4;
+            assets[6] = Properties.Resources._5;
+            assets[7] = Properties.Resources._6;
+            assets[8] = Properties.Resources._7;
+            assets[9] = Properties.Resources._8;
+            assets[10] = Properties.Resources._9;
+            assets[11] = Properties.Resources._10;
+            assets[12] = Properties.Resources._11;
+            assets[13] = Properties.Resources._12;
+            assets[14] = Properties.Resources._13;
+            assets[15] = Properties.Resources._14;
+            assets[16] = Properties.Resources._15;
+            assets[17] = Properties.Resources._16;
+            assets[18] = Properties.Resources._17;
+            assets[19] = Properties.Resources._18;
+            assets[20] = Properties.Resources._19;
+            Box.Visible = false;
+            QuestButton.Visible = false;
             item[0] = item1;
             item[1] = item2;
             item[2] = item3;
@@ -187,6 +249,8 @@ namespace RPG_FinalProj
                 mob[Program.items.fighting].Visible = false;
                 mob[Program.items.fighting].AccessibleName = "";
                 Program.items.fighting = 0;
+                Program.items.winorlose = 0;
+
             }
 
             for (int i = 0; i < obstacle.Length; i++)
@@ -207,6 +271,7 @@ namespace RPG_FinalProj
             }
 
         }
+        int lastkey;
         private void JuraForestForm7_KeyDown_1(object sender, KeyEventArgs e)
         {
             int leftPosition, topPosition, rightPosition, bottomPosition;
@@ -216,6 +281,68 @@ namespace RPG_FinalProj
             rightPosition = Player.Location.X + Player.Size.Width;
             bottomPosition = Player.Location.Y + Player.Size.Height;
             int keypressed = (int)e.KeyCode;
+            if (keypressed == 87 && lastkey != 87)
+            {
+                if (Program.items.classSelected == 1)
+                {
+                    Player.Image = warrior[0];
+                }
+                else if (Program.items.classSelected == 2)
+                {
+                    Player.Image = archer[0];
+                }
+                else if (Program.items.classSelected == 3)
+                {
+                    Player.Image = mage[0];
+                }
+
+            }
+            else if (keypressed == 65 && lastkey != 65)
+            {
+                if (Program.items.classSelected == 1)
+                {
+                    Player.Image = warrior[1];
+                }
+                else if (Program.items.classSelected == 2)
+                {
+                    Player.Image = archer[1];
+                }
+                else if (Program.items.classSelected == 3)
+                {
+                    Player.Image = mage[1];
+                }
+            }
+            else if (keypressed == 83 && lastkey != 83)
+            {
+                if (Program.items.classSelected == 1)
+                {
+                    Player.Image = warrior[2];
+                }
+                else if (Program.items.classSelected == 2)
+                {
+                    Player.Image = archer[2];
+                }
+                else if (Program.items.classSelected == 3)
+                {
+                    Player.Image = mage[2];
+                }
+            }
+            else if (keypressed == 68 && lastkey != 68)
+            {
+                if (Program.items.classSelected == 1)
+                {
+                    Player.Image = warrior[3];
+                }
+                else if (Program.items.classSelected == 2)
+                {
+                    Player.Image = archer[3];
+                }
+                else if (Program.items.classSelected == 3)
+                {
+                    Player.Image = mage[3];
+                }
+            }
+            lastkey = keypressed;
             MovementPlayer newPosition = new MovementPlayer();
             movement = newPosition.Movement(leftPosition, topPosition, rightPosition, bottomPosition, keypressed, obstacles);
             Player.Location = new Point(movement[0], movement[1]);
@@ -233,53 +360,18 @@ namespace RPG_FinalProj
         int[] entityType = { 0, 0 };
         private void InteractionChecker()
         {
+            QuestButton.Visible = false;
             if (entityType[0] > 0 && entityType[0] <= 8)
             {
-                if (entityType[0] == 1)
-                {
-                    Program.items.enemyChosen = 1;
-                }
-                else if (entityType[0] == 2)
-                {
-                    Program.items.enemyChosen = 2;
-                }
-                else if (entityType[0] == 3)
-                {
-                    Program.items.enemyChosen = 3;
-                }
-                else if (entityType[0] == 4)
-                {
-                    Program.items.enemyChosen = 4;
-                }
-                else if (entityType[0] == 5)
-                {
-                    Program.items.enemyChosen = 5;
-                }
-                else if (entityType[0] == 6)
-                {
-                    Program.items.enemyChosen = 6;
-                }
-                else if (entityType[0] == 7)
-                {
-                    Program.items.enemyChosen = 7;
-                }
-                else if (entityType[0] == 8)
-                {
-                    Program.items.enemyChosen = 8;
-                }
-
-                Program.items.location[0] = Player.Location.X;
-                Program.items.location[1] = Player.Location.Y;
-                Program.items.currentForm = 6;
-                CombatInterface CI = new CombatInterface();
-                this.Hide();
-                CI.ShowDialog();
-                this.Close();
 
             }
             else if (entityType[0] == 9)
             {
 
+            }
+            else if (entityType[0] == 10)
+            {
+                QuestButton.Visible = true;
             }
         }
 
@@ -290,17 +382,19 @@ namespace RPG_FinalProj
 
         public void printitems(int starting)
         {
+            itemindex = Program.items.availableItems();
             for (int x = 0; x < item.Length; x++)
             {
                 itemlb[x].Text = "";
-                item[x].BackColor = Color.White;
             }
             for (int x = 0; x < itemlb.Length; x++)
             {
                 if (itemlb[x].Text == "" && itemindex[x + starting] != 0)
                 {
                     itemlb[x].Text = itemquan[itemindex[x + starting]].ToString();
-                    item[x].BackColor = Color.Black;
+                    item[x].Image = assets[itemindex[x + starting]];
+                    item[x].SizeMode = PictureBoxSizeMode.StretchImage;
+
                 }
             }
         }
@@ -330,6 +424,8 @@ namespace RPG_FinalProj
             {
                 select = (int)clickedButton.Tag;
                 current = itemindex[select + starting];
+                Select.Image = assets[current];
+                Select.SizeMode = PictureBoxSizeMode.StretchImage;
                 select1.Text = itemquan[current].ToString();
             }
         }
@@ -340,6 +436,7 @@ namespace RPG_FinalProj
             {
                 Program.items.itemuse(current);
             }
+            printitems(starting);
         }
 
         private void OPEN_Click(object sender, EventArgs e)
@@ -365,6 +462,105 @@ namespace RPG_FinalProj
         private void pictureBox47_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        string currentText;
+        int currentIndex;
+        private void QuestButton_Click(object sender, EventArgs e)
+        {
+            Box.Visible = true;
+            currentIndex = 0;
+            if (Program.dialogues.JSQ1 < 3 && (Program.dialogues.currentQuest == "Jura1" || Program.dialogues.currentQuest == ""))
+            {
+                if (Program.dialogues.JSQ1 == 2)
+                {
+                    if (Program.dialogues.Jura1[0] != 5 && Program.dialogues.Jura1[1] != 5)
+                    {
+                        MessageBox.Show("completer the objective first");
+                    }
+                    else
+                    {
+                        currentText = dialogues.CJSQ1();
+                        Program.dialogues.JSQ1++;
+                        Program.dialogues.currentQuest = "Jura1";
+                        MessageBox.Show("Tapos na yung quest");
+                    }
+                }
+                else
+                {
+                    currentText = dialogues.CJSQ1();
+                    Program.dialogues.JSQ1++;
+                    Program.dialogues.currentQuest = "Jura1";
+                }
+
+                if (Program.dialogues.JSQ1 == 3)
+                {
+                    Program.dialogues.currentQuest = "";
+                }
+            }
+            else { currentText = "Quest Alrady done"; }
+            Dialogue.Text = "";
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (currentIndex < currentText.Length)
+            {
+                Dialogue.Text += currentText[currentIndex];
+                currentIndex++;
+            }
+            else
+            {
+                timer1.Stop();
+            }
+        }
+        private void print()
+        {
+            if (Program.items.classSelected == 1)
+            {
+                Idle.Image = warrior[3];
+            }
+            else if (Program.items.classSelected == 2)
+            {
+                Idle.Image = archer[3];
+            }
+            else if (Program.items.classSelected == 3)
+            {
+                Idle.Image = mage[3];
+            }
+
+            if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .9)
+            {
+                Health.Image = Properties.Resources._1_1;
+            }
+            else if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .8)
+            {
+                Health.Image = Properties.Resources._2_1;
+            }
+            else if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .6)
+            {
+                Health.Image = Properties.Resources._3_1;
+            }
+            else if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .4)
+            {
+                Health.Image = Properties.Resources._4_1;
+            }
+            else if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .2)
+            {
+                Health.Image = Properties.Resources._5_1;
+            }
+            else if (((float)Program.items.playerHealth / Program.items.Maxhealth) > .0)
+            {
+                Health.Image = Properties.Resources._6_1;
+            }
+
+            Stat1.Text = Program.items.playerstats[0].ToString();
+            Stat2.Text = Program.items.playerstats[1].ToString();
+            Stat3.Text = Program.items.playerstats[4].ToString();
+            Stat4.Text = Program.items.playerstats[6].ToString();
+            Stat5.Text = Program.items.playerstats[7].ToString();
+            GoldPrint.Text = Program.items.gold.ToString();
         }
     }
 }

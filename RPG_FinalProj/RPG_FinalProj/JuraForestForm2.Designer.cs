@@ -55,7 +55,7 @@
             pictureBox24 = new PictureBox();
             pictureBox25 = new PictureBox();
             pictureBox26 = new PictureBox();
-            puzzle1 = new PictureBox();
+            mob3 = new PictureBox();
             Player = new PictureBox();
             mob1 = new PictureBox();
             mob2 = new PictureBox();
@@ -86,6 +86,28 @@
             item2 = new PictureBox();
             item1 = new PictureBox();
             OPEN = new PictureBox();
+            panel2 = new Panel();
+            GoldPrint = new Label();
+            Health = new PictureBox();
+            Stat5 = new Label();
+            Stat4 = new Label();
+            Stat3 = new Label();
+            Stat2 = new Label();
+            Stat1 = new Label();
+            Idle = new PictureBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label11 = new Label();
+            panel3 = new Panel();
+            PuzBtn8 = new Label();
+            PuzBtn7 = new Label();
+            PuzBtn6 = new Label();
+            PuzBtn5 = new Label();
+            PuzBtn4 = new Label();
+            PuzBtn3 = new Label();
+            PuzBtn2 = new Label();
+            PuzBtn1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -112,7 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)puzzle1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob2).BeginInit();
@@ -132,6 +154,10 @@
             ((System.ComponentModel.ISupportInitialize)item2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)item1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -342,14 +368,15 @@
             pictureBox26.TabIndex = 25;
             pictureBox26.TabStop = false;
             // 
-            // puzzle1
+            // mob3
             // 
-            puzzle1.BackColor = SystemColors.ActiveCaption;
-            puzzle1.Location = new Point(1024, 449);
-            puzzle1.Name = "puzzle1";
-            puzzle1.Size = new Size(216, 265);
-            puzzle1.TabIndex = 26;
-            puzzle1.TabStop = false;
+            mob3.AccessibleName = "Puzzle1";
+            mob3.BackColor = SystemColors.ActiveCaption;
+            mob3.Location = new Point(1024, 449);
+            mob3.Name = "mob3";
+            mob3.Size = new Size(216, 265);
+            mob3.TabIndex = 26;
+            mob3.TabStop = false;
             // 
             // Player
             // 
@@ -476,6 +503,7 @@
             itemlb8.TabIndex = 20;
             itemlb8.Text = "label1";
             itemlb8.TextAlign = ContentAlignment.MiddleCenter;
+            itemlb8.Click += itemlb8_Click;
             // 
             // itemlb6
             // 
@@ -680,6 +708,286 @@
             OPEN.TabStop = false;
             OPEN.Click += pictureBox29_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(GoldPrint);
+            panel2.Controls.Add(Health);
+            panel2.Controls.Add(Stat5);
+            panel2.Controls.Add(Stat4);
+            panel2.Controls.Add(Stat3);
+            panel2.Controls.Add(Stat2);
+            panel2.Controls.Add(Stat1);
+            panel2.Controls.Add(Idle);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label11);
+            panel2.Location = new Point(0, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(265, 160);
+            panel2.TabIndex = 69;
+            // 
+            // GoldPrint
+            // 
+            GoldPrint.AutoSize = true;
+            GoldPrint.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GoldPrint.ForeColor = Color.Black;
+            GoldPrint.Location = new Point(154, 119);
+            GoldPrint.Name = "GoldPrint";
+            GoldPrint.Size = new Size(58, 19);
+            GoldPrint.TabIndex = 29;
+            GoldPrint.Text = "label8";
+            GoldPrint.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Health
+            // 
+            Health.BackColor = Color.Transparent;
+            Health.BackgroundImageLayout = ImageLayout.Stretch;
+            Health.Image = Properties.Resources._4_1;
+            Health.Location = new Point(8, 119);
+            Health.Name = "Health";
+            Health.Size = new Size(103, 19);
+            Health.SizeMode = PictureBoxSizeMode.StretchImage;
+            Health.TabIndex = 30;
+            Health.TabStop = false;
+            // 
+            // Stat5
+            // 
+            Stat5.AutoSize = true;
+            Stat5.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat5.ForeColor = Color.Black;
+            Stat5.Location = new Point(181, 87);
+            Stat5.Name = "Stat5";
+            Stat5.Size = new Size(58, 19);
+            Stat5.TabIndex = 28;
+            Stat5.Text = "label8";
+            Stat5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat4
+            // 
+            Stat4.AutoSize = true;
+            Stat4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat4.ForeColor = Color.Black;
+            Stat4.Location = new Point(181, 68);
+            Stat4.Name = "Stat4";
+            Stat4.Size = new Size(58, 19);
+            Stat4.TabIndex = 27;
+            Stat4.Text = "label7";
+            Stat4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat3
+            // 
+            Stat3.AutoSize = true;
+            Stat3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat3.ForeColor = Color.Black;
+            Stat3.Location = new Point(181, 49);
+            Stat3.Name = "Stat3";
+            Stat3.Size = new Size(58, 19);
+            Stat3.TabIndex = 26;
+            Stat3.Text = "label6";
+            Stat3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat2
+            // 
+            Stat2.AutoSize = true;
+            Stat2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat2.ForeColor = Color.Black;
+            Stat2.Location = new Point(181, 30);
+            Stat2.Name = "Stat2";
+            Stat2.Size = new Size(58, 19);
+            Stat2.TabIndex = 25;
+            Stat2.Text = "label5";
+            Stat2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat1
+            // 
+            Stat1.AutoSize = true;
+            Stat1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat1.ForeColor = Color.Black;
+            Stat1.Location = new Point(181, 11);
+            Stat1.Name = "Stat1";
+            Stat1.Size = new Size(58, 19);
+            Stat1.TabIndex = 24;
+            Stat1.Text = "label1";
+            Stat1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Idle
+            // 
+            Idle.BackColor = Color.White;
+            Idle.BackgroundImageLayout = ImageLayout.Stretch;
+            Idle.Image = Properties.Resources.mage_walk_rigth;
+            Idle.Location = new Point(17, 29);
+            Idle.Name = "Idle";
+            Idle.Size = new Size(76, 71);
+            Idle.SizeMode = PictureBoxSizeMode.StretchImage;
+            Idle.TabIndex = 24;
+            Idle.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(358, 542);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 19);
+            label2.TabIndex = 22;
+            label2.Text = "label1";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(100, 542);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 19);
+            label3.TabIndex = 21;
+            label3.Text = "label1";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(229, 542);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 19);
+            label4.TabIndex = 20;
+            label4.Text = "label1";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.WhiteSmoke;
+            label11.Location = new Point(195, 561);
+            label11.Name = "label11";
+            label11.Size = new Size(134, 27);
+            label11.TabIndex = 11;
+            label11.Text = "USE ITEM";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Controls.Add(PuzBtn8);
+            panel3.Controls.Add(PuzBtn7);
+            panel3.Controls.Add(PuzBtn6);
+            panel3.Controls.Add(PuzBtn5);
+            panel3.Controls.Add(PuzBtn4);
+            panel3.Controls.Add(PuzBtn3);
+            panel3.Controls.Add(PuzBtn2);
+            panel3.Controls.Add(PuzBtn1);
+            panel3.Location = new Point(349, 256);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(728, 598);
+            panel3.TabIndex = 33;
+            panel3.Visible = false;
+            // 
+            // PuzBtn8
+            // 
+            PuzBtn8.Font = new Font("Copperplate Gothic Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn8.ForeColor = Color.Black;
+            PuzBtn8.Location = new Point(547, 442);
+            PuzBtn8.Name = "PuzBtn8";
+            PuzBtn8.Size = new Size(133, 85);
+            PuzBtn8.TabIndex = 38;
+            PuzBtn8.Tag = "4";
+            PuzBtn8.Text = "Hint: You can click everywhere there is a text";
+            PuzBtn8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn7
+            // 
+            PuzBtn7.Font = new Font("Copperplate Gothic Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn7.ForeColor = Color.Black;
+            PuzBtn7.Location = new Point(59, 442);
+            PuzBtn7.Name = "PuzBtn7";
+            PuzBtn7.Size = new Size(133, 85);
+            PuzBtn7.TabIndex = 37;
+            PuzBtn7.Tag = "4";
+            PuzBtn7.Text = "Make all the the numbers the Same";
+            PuzBtn7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn6
+            // 
+            PuzBtn6.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn6.ForeColor = Color.Black;
+            PuzBtn6.Location = new Point(505, 280);
+            PuzBtn6.Name = "PuzBtn6";
+            PuzBtn6.Size = new Size(119, 108);
+            PuzBtn6.TabIndex = 36;
+            PuzBtn6.Tag = "6";
+            PuzBtn6.Text = "1";
+            PuzBtn6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn5
+            // 
+            PuzBtn5.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn5.ForeColor = Color.Black;
+            PuzBtn5.Location = new Point(307, 280);
+            PuzBtn5.Name = "PuzBtn5";
+            PuzBtn5.Size = new Size(119, 108);
+            PuzBtn5.TabIndex = 35;
+            PuzBtn5.Tag = "5";
+            PuzBtn5.Text = "1";
+            PuzBtn5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn4
+            // 
+            PuzBtn4.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn4.ForeColor = Color.Black;
+            PuzBtn4.Location = new Point(103, 276);
+            PuzBtn4.Name = "PuzBtn4";
+            PuzBtn4.Size = new Size(119, 108);
+            PuzBtn4.TabIndex = 34;
+            PuzBtn4.Tag = "4";
+            PuzBtn4.Text = "1";
+            PuzBtn4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn3
+            // 
+            PuzBtn3.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn3.ForeColor = Color.Black;
+            PuzBtn3.Location = new Point(505, 112);
+            PuzBtn3.Name = "PuzBtn3";
+            PuzBtn3.Size = new Size(119, 108);
+            PuzBtn3.TabIndex = 33;
+            PuzBtn3.Tag = "3";
+            PuzBtn3.Text = "1";
+            PuzBtn3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn2
+            // 
+            PuzBtn2.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn2.ForeColor = Color.Black;
+            PuzBtn2.Location = new Point(307, 114);
+            PuzBtn2.Name = "PuzBtn2";
+            PuzBtn2.Size = new Size(119, 108);
+            PuzBtn2.TabIndex = 32;
+            PuzBtn2.Tag = "2";
+            PuzBtn2.Text = "1";
+            PuzBtn2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // PuzBtn1
+            // 
+            PuzBtn1.Font = new Font("Copperplate Gothic Light", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PuzBtn1.ForeColor = Color.Black;
+            PuzBtn1.Location = new Point(103, 114);
+            PuzBtn1.Name = "PuzBtn1";
+            PuzBtn1.Size = new Size(119, 108);
+            PuzBtn1.TabIndex = 31;
+            PuzBtn1.Tag = "1";
+            PuzBtn1.Text = "1";
+            PuzBtn1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // JuraForestForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -687,13 +995,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
             Controls.Add(OPEN);
             Controls.Add(panel1);
             Controls.Add(pictureBox27);
             Controls.Add(mob2);
             Controls.Add(mob1);
             Controls.Add(Player);
-            Controls.Add(puzzle1);
+            Controls.Add(mob3);
             Controls.Add(pictureBox26);
             Controls.Add(pictureBox25);
             Controls.Add(pictureBox24);
@@ -751,7 +1061,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
-            ((System.ComponentModel.ISupportInitialize)puzzle1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).EndInit();
             ((System.ComponentModel.ISupportInitialize)Player).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob1).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob2).EndInit();
@@ -772,6 +1082,11 @@
             ((System.ComponentModel.ISupportInitialize)item2).EndInit();
             ((System.ComponentModel.ISupportInitialize)item1).EndInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -803,7 +1118,7 @@
         private PictureBox pictureBox24;
         private PictureBox pictureBox25;
         private PictureBox pictureBox26;
-        private PictureBox puzzle1;
+        private PictureBox mob3;
         private PictureBox Player;
         private PictureBox mob1;
         private PictureBox mob2;
@@ -834,5 +1149,27 @@
         private PictureBox item2;
         private PictureBox item1;
         private PictureBox OPEN;
+        private Panel panel2;
+        private Label GoldPrint;
+        private PictureBox Health;
+        private Label Stat5;
+        private Label Stat4;
+        private Label Stat3;
+        private Label Stat2;
+        private Label Stat1;
+        private PictureBox Idle;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label11;
+        private Panel panel3;
+        private Label PuzBtn6;
+        private Label PuzBtn5;
+        private Label PuzBtn4;
+        private Label PuzBtn3;
+        private Label PuzBtn2;
+        private Label PuzBtn1;
+        private Label PuzBtn8;
+        private Label PuzBtn7;
     }
 }

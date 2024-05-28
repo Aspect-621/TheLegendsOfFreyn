@@ -8,13 +8,13 @@ namespace RPG_FinalProj
 {
     internal class LocItems
     {
-
         public string[] itemname;
         public int[] itemquan;
 
         public string[] merch3name;
         public int[] merch3price;
 
+        public int Maxhealth;
         public int[] weaponadd = { 0, 0, 0, 0, 0, 0, 0, 0 };
         public string[] merch2name;
         public int[] merch2price;
@@ -28,25 +28,29 @@ namespace RPG_FinalProj
         public int fighting;
         public int winorlose;
         public int[] playerstats;
-        public int playerHealth = 1000;
-        public string[] name1 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" };
-        public int[] quan1 = { 0, 2, 3, 0, 5, 6, 0, 8, 0, 10, 0, 12, 13, 0, 15 };
-        public int[] merchant3price = { 0, 20, 30, 0, 50, 60, 0, 8, 0, 100, 0, 120, 130, 0, 150 };
-        public int[] merchant2price = { 0, 20, 30, 0, 50, 60, 0, 8, 0, 100, 0, 120, 130, 0, 150 };
-        public int[] merchant1price = { 0, 20, 30, 0, 50, 60, 0, 8, 0, 100, 0, 120, 130, 0, 150 };
+        public int playerHealth;
+        public string[] name1 = { "3", "Empty Pot", "Full Pot", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "12", "13", "14", "15" };
+        public int[] quan1 = { 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+        public int[] merchant3price = {0, 700, 150, 500, 2000, 1700, 0, 0, 0, 2500, 0, 0, 0, 2500, 0, 0, 0, 4000, 2500, 0 };
+
+        public int[] merchant2price = {0, 700, 150, 500, 2000, 0, 2000, 0, 2300, 0, 1900, 0, 0, 0, 3000, 0, 4000, 0, 0, 0  };
+
+        public int[] merchant1price = {0, 700, 150, 500, 2000, 0, 0, 1800, 0, 0, 0, 3000, 0, 2700, 0, 2800, 0, 0, 0, 3000 };
         public int[] location;
-        public int classSelected;
+        public int classSelected = 2;
         public int enemyChosen;
 
         public LocItems()
         {
+
             merch1price = merchant1price;
             merch2price = merchant2price;
             merch3price = merchant3price;
             itemname = name1;
             itemquan = quan1;
             enemyChosen = 1;
-            gold = 100000;
+            gold = 100;
             playerstats = new int[8];
             location = new int[2];
             location[0] = 123;
@@ -89,6 +93,11 @@ namespace RPG_FinalProj
         public void setstats(int index, int value)
         {
             playerstats[index] = value;
+            if (index == 7)
+            {
+                playerHealth = playerstats[7] * 15 + 300;
+                Maxhealth = playerHealth;
+            }
         }
 
         public void addstats(string operation, int[] value)
@@ -125,6 +134,7 @@ namespace RPG_FinalProj
             {
                 playerstats[7] += 10;
                 playerHealth = playerstats[7] * 20 + 200;
+                
             }
             else if (item == 3)
             {
@@ -254,7 +264,7 @@ namespace RPG_FinalProj
         public int[] availableItems()
         {
             int[] availableItem = new int[15];
-            int[] itemindex = new int[15];
+            int[] itemindex = new int[20];
             for (int i = 0; i < itemname.Length; i++)
             {
                 if (itemquan[i] != 0)
@@ -279,7 +289,7 @@ namespace RPG_FinalProj
 
         public int[] Merchant3Items()
         {
-            int[] itemindex = new int[15];
+            int[] itemindex = new int[20];
             for (int i = 0; i < itemname.Length; i++)
             {
                 if (merch3price[i] != 0)
@@ -304,7 +314,7 @@ namespace RPG_FinalProj
 
         public int[] Merchant2Items()
         {
-            int[] itemindex = new int[15];
+            int[] itemindex = new int[20];
             for (int i = 0; i < itemname.Length; i++)
             {
                 if (merch2price[i] != 0)
@@ -329,7 +339,7 @@ namespace RPG_FinalProj
 
         public int[] Merchant1Items()
         {
-            int[] itemindex = new int[15];
+            int[] itemindex = new int[20];
             for (int i = 0; i < itemname.Length; i++)
             {
                 if (merch1price[i] != 0)

@@ -19,10 +19,12 @@ namespace RPG_FinalProj
         Random random = new Random();
         Form[] forms = new Form[20];
         private readonly LocItems _items;
+        private readonly quest1Dialogue dialogues;
         public CombatInterface()
         {
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
         }
 
         int chosenskill = 0;
@@ -39,13 +41,14 @@ namespace RPG_FinalProj
         string[] mobSkills, playerSkill;
         int mobskill = 1;
 
-        int chosenClass = 1;
+        int chosenClass;
         int enemy = 3;
 
         public int playerHealth;
         public int mobHealth = 1000;
         private void CombatInterface_Load(object sender, EventArgs e)
         {
+            chosenClass = Program.items.classSelected;
             forms[0] = new JuraForestForm1();
             forms[1] = new JuraForestForm2();
             forms[2] = new JuraForestForm3();
@@ -77,13 +80,20 @@ namespace RPG_FinalProj
             playerWarrior PW = new playerWarrior();
             playerArcher PA = new playerArcher();
             playerMage PM = new playerMage();
-
+            Skeleton skeleton = new Skeleton();
+            Slime slime = new Slime();
+            Slime_King SK = new Slime_King();
+            DemonQueen DQ = new DemonQueen();
+            DemonKing DK = new DemonKing();
             if (enemy == 1)
             {
                 mobSkills = goblin.goblinSkills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30,40);
+                    mobstats[x] = random.Next(25, 35);
+                    mobHealth = mobstats[6] * 7 + 200;
+                    EnemyPic.Image = Properties.Resources.goblin_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 2)
@@ -91,7 +101,10 @@ namespace RPG_FinalProj
                 mobSkills = ogre.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(40, 50);
+                    mobHealth = mobstats[6] * 10 + 300;
+                    EnemyPic.Image = Properties.Resources.goblin_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 3)
@@ -99,7 +112,10 @@ namespace RPG_FinalProj
                 mobSkills = wolf.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(30, 40); 
+                    mobHealth = mobstats[6] * 8 + 300;
+                    EnemyPic.Image = Properties.Resources.ogre_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 4)
@@ -107,7 +123,10 @@ namespace RPG_FinalProj
                 mobSkills = WW.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(45, 55);
+                    mobHealth = mobstats[6] * 10 + 300;
+                    EnemyPic.Image = Properties.Resources.warewolf_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 5)
@@ -115,7 +134,10 @@ namespace RPG_FinalProj
                 mobSkills = dead.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(35, 45);
+                    mobHealth = mobstats[6] * 10 + 200;
+                    EnemyPic.Image = Properties.Resources.Un_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 6)
@@ -123,31 +145,62 @@ namespace RPG_FinalProj
                 mobSkills = bato.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(60, 65);
+                    mobHealth = mobstats[6] * 15 + 300;
+                    EnemyPic.Image = Properties.Resources.gorgoyle_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else if (enemy == 7)
             {
-                mobSkills = ogre.Skills;
+                mobSkills = skeleton.Skills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30, 40);
+                    mobstats[x] = random.Next(45, 50);
+                    mobHealth = mobstats[6] * 8 + 200;
+                    EnemyPic.Image = Properties.Resources.skeleton_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            else if (enemy == 8)
+            {
+                mobSkills = slime.Skills;
+                for (int x = 0; x < 7; x++)
+                {
+                    mobstats[x] = random.Next(10, 20);
+                    mobHealth = mobstats[6] * 4 + 300;
+                    EnemyPic.Image = Properties.Resources.GreenSlime_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            else if (enemy == 9)
+            {
+                mobSkills = SK.Skills;
+                for (int x = 0; x < 7; x++)
+                {
+                    mobstats[x] = random.Next(80,85);
+                    mobHealth = mobstats[6] * 10 + 300;
+                    EnemyPic.Image = Properties.Resources.GreenSlime_idle;
+                    EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
 
             if (chosenClass == 1)
             {
                 playerSkill = PW.warriorSkills;
+                Player.Image = Properties.Resources.sword_attack_right;
             }
             else if (chosenClass == 2)
             {
                 playerSkill = PA.archerSkills;
+                Player.Image = Properties.Resources.Archer_attack_right;
             }
             else if (chosenClass == 3)
             {
                 playerSkill = PM.mageSkills;
+                Player.Image = Properties.Resources.mage_atttack_rigth;
             }
-            
+
             radioButton1.Text = playerSkill[0];
             radioButton2.Text = playerSkill[1];
             radioButton3.Text = playerSkill[2];
@@ -165,6 +218,11 @@ namespace RPG_FinalProj
             Werewolf WW = new Werewolf();
             Undead dead = new Undead();
             Gargoyle bato = new Gargoyle();
+            Skeleton skeleton = new Skeleton();
+            Slime slime = new Slime();
+            Slime_King SK = new Slime_King();
+            DemonQueen DQ = new DemonQueen();
+            DemonKing DK = new DemonKing();
             playerWarrior PW = new playerWarrior();
             playerArcher PA = new playerArcher();
             playerMage PM = new playerMage();
@@ -183,10 +241,12 @@ namespace RPG_FinalProj
                 else if (chosenClass == 2)
                 {
                     Pdamage = PA.pWarriorDamage(chosenskill, playerstats[0], mobstats[2], mobstats[3], mobstats[5], mobstats[6], mobdebuff, playerbuff);
+                    Pdamage[1] += (int)(Program.items.playerstats[4] * 2.5);
                 }
                 else if (chosenClass == 3)
                 {
-                    Pdamage = PM.pWarriorDamage(chosenskill, playerstats[0], mobstats[2], mobstats[3], mobstats[5], mobstats[6], mobdebuff, playerbuff);
+                    Pdamage = PM.pWarriorDamage(chosenskill, playerstats[1], mobstats[2], mobstats[3], mobstats[5], mobstats[6], mobdebuff, playerbuff);
+                    Pdamage[1] += (int)(Program.items.playerstats[1] * 2);
                 }
 
                 if (Pdamage[0] == 3)
@@ -228,7 +288,23 @@ namespace RPG_FinalProj
                 }
                 else if (enemy == 7)
                 {
-                    Gdamage = ogre.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
+                    Gdamage = skeleton.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
+                }
+                else if (enemy == 8)
+                {
+                    Gdamage = slime.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
+                }
+                else if (enemy == 9)
+                {
+                    Gdamage = SK.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
+                }
+                else if (enemy == 10)
+                {
+                    Gdamage = DQ.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
+                }
+                else if (enemy == 11)
+                {
+                    Gdamage = DK.Attack(mobskill, mobstats[0], playerstats[2], playerstats[3], playerstats[5], playerstats[6], playerdebuff, mobbuff);
                 }
 
                 mobHealth -= Pdamage[1];
@@ -295,7 +371,102 @@ namespace RPG_FinalProj
                 this.Hide();
                 forms[Program.items.currentForm].ShowDialog();
                 this.Close();
-            }   
+
+                if (Program.dialogues.currentQuest == "Jura1")
+                {
+                    if (enemy == 8)
+                    {
+                        Program.dialogues.Jura1[0]++;
+                    }
+                    else if (enemy == 3)
+                    {
+                        Program.dialogues.Jura1[1]++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest2")
+                {
+                    if (enemy == 2)
+                    {
+                        Program.dialogues.Crest2++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest3")
+                {
+                    if (enemy == 1)
+                    {
+                        Program.dialogues.Crest2++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest4")
+                {
+                    if (enemy == 1)
+                    {
+                        Program.dialogues.Crest4[0]++;
+                    }
+                    else if (enemy == 2)
+                    {
+                        Program.dialogues.Crest4[1]++;
+                    }
+                    else if (enemy == 3)
+                    {
+                        Program.dialogues.Crest4[2]++;
+                    }
+                    else if (enemy == 8)
+                    {
+                        Program.dialogues.Crest4[3]++;
+                    }
+                    else if (enemy == 7)
+                    {
+                        Program.dialogues.Crest4[4]++;
+                    }
+                }
+
+
+                if (enemy == 1)
+                {
+                    Program.items.gold += random.Next(150, 180);
+                }
+                else if (enemy == 2)
+                {
+                    Program.items.gold += random.Next(170, 200);
+                }
+                else if (enemy == 3)
+                {
+                    Program.items.gold += random.Next(140, 170);
+                }
+                else if (enemy == 4)
+                {
+                    Program.items.gold += random.Next(250, 270);
+                }
+                else if (enemy == 5)
+                {
+                    Program.items.gold += random.Next(140, 170);
+                }
+                else if (enemy == 6)
+                {
+                    Program.items.gold += random.Next(300, 330);
+                }
+                else if (enemy == 7)
+                {
+                    Program.items.gold += random.Next(140, 170);
+                }
+                else if (enemy == 8)
+                {
+                    Program.items.gold += random.Next(80, 100);
+                }
+                else if (enemy == 9)
+                {
+                    Program.items.gold += 1500;
+                }
+                else if (enemy == 10)
+                {
+                    Program.items.gold += 3000;
+                }
+                else if (enemy == 11)
+                {
+                    Program.items.gold += 5000;
+                }
+            }
         }
 
         private void printdamage(int x, int[] damage)
@@ -316,6 +487,16 @@ namespace RPG_FinalProj
                     label2.Text += "\n additional Damage" + damage[6].ToString();
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
