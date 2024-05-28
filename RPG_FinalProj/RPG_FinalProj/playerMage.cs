@@ -8,7 +8,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
 {
     internal class playerMage
     {
-        public string[] mageSkills = { "skill1", "skill2", "skill3", "skill4" };
+        public string[] mageSkills = { "O'fire", "O’Aqua ", "Tidal Wave", "Arcane Tempest" };
         public int[] pWarriorDamage(int chosenAttack, int playerStrength, int mobArmor, int mobMR, int mobLuck, int mobEvasion, int[] Mobdebuffs, int[] playerBuffs)
         {
             Random random = new Random();
@@ -20,7 +20,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                 {
                     if (random.Next(1, 101) >= 50 - (mobLuck * .6))
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -28,7 +28,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                     }
                     else
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -50,7 +50,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                 {
                     if (random.Next(1, 101) >= 50 - (mobLuck * .6))
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -58,7 +58,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                     }
                     else
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -80,7 +80,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                 {
                     if (random.Next(1, 76) >= 50 - (mobLuck * .6))
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.8f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -88,7 +88,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                     }
                     else
                     {
-                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
+                        damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 1.8f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
                         damage[2] = 100;
                         damage[3] = 100;
                         damage[4] = 0;
@@ -108,7 +108,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
             {
                 if (random.Next(1, 101) >= 50 - (mobLuck * .6))
                 {
-                    damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
+                    damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.7f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)) * 1.5);
                     damage[2] = 100;
                     damage[3] = 100;
                     damage[4] = 0;
@@ -116,7 +116,7 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
                 }
                 else
                 {
-                    damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.3f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
+                    damage[1] = (int)(((30 + (playerStrength * (1 + (playerBuffs[0] / 100f))) * 2.7f) * ((100 - (mobArmor * (Mobdebuffs[0] / 100f))) / 100f)));
                     damage[2] = 100;
                     damage[3] = 100;
                     damage[4] = 0;

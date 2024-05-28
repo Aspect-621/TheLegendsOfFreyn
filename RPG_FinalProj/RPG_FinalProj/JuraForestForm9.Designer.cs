@@ -56,7 +56,7 @@
             pictureBox25 = new PictureBox();
             pictureBox26 = new PictureBox();
             pictureBox27 = new PictureBox();
-            SlimeBoss = new PictureBox();
+            mob3 = new PictureBox();
             Player = new PictureBox();
             mob1 = new PictureBox();
             mob2 = new PictureBox();
@@ -88,6 +88,19 @@
             item2 = new PictureBox();
             item1 = new PictureBox();
             OPEN = new PictureBox();
+            panel2 = new Panel();
+            GoldPrint = new Label();
+            Health = new PictureBox();
+            Stat5 = new Label();
+            Stat4 = new Label();
+            Stat3 = new Label();
+            Stat2 = new Label();
+            Stat1 = new Label();
+            Idle = new PictureBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -115,7 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SlimeBoss).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob2).BeginInit();
@@ -136,6 +149,9 @@
             ((System.ComponentModel.ISupportInitialize)item2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)item1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -354,14 +370,15 @@
             pictureBox27.TabIndex = 25;
             pictureBox27.TabStop = false;
             // 
-            // SlimeBoss
+            // mob3
             // 
-            SlimeBoss.BackColor = Color.Red;
-            SlimeBoss.Location = new Point(770, 340);
-            SlimeBoss.Name = "SlimeBoss";
-            SlimeBoss.Size = new Size(180, 162);
-            SlimeBoss.TabIndex = 26;
-            SlimeBoss.TabStop = false;
+            mob3.AccessibleName = "Slime King";
+            mob3.BackColor = Color.Red;
+            mob3.Location = new Point(770, 340);
+            mob3.Name = "mob3";
+            mob3.Size = new Size(180, 162);
+            mob3.TabIndex = 26;
+            mob3.TabStop = false;
             // 
             // Player
             // 
@@ -443,7 +460,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 189);
+            panel1.Location = new Point(205, 192);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 64;
@@ -700,6 +717,172 @@
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(GoldPrint);
+            panel2.Controls.Add(Health);
+            panel2.Controls.Add(Stat5);
+            panel2.Controls.Add(Stat4);
+            panel2.Controls.Add(Stat3);
+            panel2.Controls.Add(Stat2);
+            panel2.Controls.Add(Stat1);
+            panel2.Controls.Add(Idle);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label11);
+            panel2.Location = new Point(-3, -6);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(265, 160);
+            panel2.TabIndex = 69;
+            panel2.Paint += panel2_Paint;
+            // 
+            // GoldPrint
+            // 
+            GoldPrint.AutoSize = true;
+            GoldPrint.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GoldPrint.ForeColor = Color.Black;
+            GoldPrint.Location = new Point(154, 119);
+            GoldPrint.Name = "GoldPrint";
+            GoldPrint.Size = new Size(58, 19);
+            GoldPrint.TabIndex = 29;
+            GoldPrint.Text = "label8";
+            GoldPrint.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Health
+            // 
+            Health.BackColor = Color.Transparent;
+            Health.BackgroundImageLayout = ImageLayout.Stretch;
+            Health.Image = Properties.Resources._4_1;
+            Health.Location = new Point(8, 119);
+            Health.Name = "Health";
+            Health.Size = new Size(103, 19);
+            Health.SizeMode = PictureBoxSizeMode.StretchImage;
+            Health.TabIndex = 30;
+            Health.TabStop = false;
+            // 
+            // Stat5
+            // 
+            Stat5.AutoSize = true;
+            Stat5.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat5.ForeColor = Color.Black;
+            Stat5.Location = new Point(181, 87);
+            Stat5.Name = "Stat5";
+            Stat5.Size = new Size(58, 19);
+            Stat5.TabIndex = 28;
+            Stat5.Text = "label8";
+            Stat5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat4
+            // 
+            Stat4.AutoSize = true;
+            Stat4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat4.ForeColor = Color.Black;
+            Stat4.Location = new Point(181, 68);
+            Stat4.Name = "Stat4";
+            Stat4.Size = new Size(58, 19);
+            Stat4.TabIndex = 27;
+            Stat4.Text = "label7";
+            Stat4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat3
+            // 
+            Stat3.AutoSize = true;
+            Stat3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat3.ForeColor = Color.Black;
+            Stat3.Location = new Point(181, 49);
+            Stat3.Name = "Stat3";
+            Stat3.Size = new Size(58, 19);
+            Stat3.TabIndex = 26;
+            Stat3.Text = "label6";
+            Stat3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat2
+            // 
+            Stat2.AutoSize = true;
+            Stat2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat2.ForeColor = Color.Black;
+            Stat2.Location = new Point(181, 30);
+            Stat2.Name = "Stat2";
+            Stat2.Size = new Size(58, 19);
+            Stat2.TabIndex = 25;
+            Stat2.Text = "label5";
+            Stat2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stat1
+            // 
+            Stat1.AutoSize = true;
+            Stat1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Stat1.ForeColor = Color.Black;
+            Stat1.Location = new Point(181, 11);
+            Stat1.Name = "Stat1";
+            Stat1.Size = new Size(58, 19);
+            Stat1.TabIndex = 24;
+            Stat1.Text = "label1";
+            Stat1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Idle
+            // 
+            Idle.BackColor = Color.White;
+            Idle.BackgroundImageLayout = ImageLayout.Stretch;
+            Idle.Image = Properties.Resources.mage_walk_rigth;
+            Idle.Location = new Point(17, 29);
+            Idle.Name = "Idle";
+            Idle.Size = new Size(76, 71);
+            Idle.SizeMode = PictureBoxSizeMode.StretchImage;
+            Idle.TabIndex = 24;
+            Idle.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(358, 542);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 19);
+            label2.TabIndex = 22;
+            label2.Text = "label1";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(100, 542);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 19);
+            label3.TabIndex = 21;
+            label3.Text = "label1";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(229, 542);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 19);
+            label4.TabIndex = 20;
+            label4.Text = "label1";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.WhiteSmoke;
+            label11.Location = new Point(195, 561);
+            label11.Name = "label11";
+            label11.Size = new Size(134, 27);
+            label11.TabIndex = 11;
+            label11.Text = "USE ITEM";
+            // 
             // JuraForestForm9
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -707,6 +890,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(panel2);
             Controls.Add(OPEN);
             Controls.Add(panel1);
             Controls.Add(pictureBox29);
@@ -714,7 +898,7 @@
             Controls.Add(mob2);
             Controls.Add(mob1);
             Controls.Add(Player);
-            Controls.Add(SlimeBoss);
+            Controls.Add(mob3);
             Controls.Add(pictureBox27);
             Controls.Add(pictureBox26);
             Controls.Add(pictureBox25);
@@ -774,7 +958,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SlimeBoss).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).EndInit();
             ((System.ComponentModel.ISupportInitialize)Player).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob1).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob2).EndInit();
@@ -796,6 +980,10 @@
             ((System.ComponentModel.ISupportInitialize)item2).EndInit();
             ((System.ComponentModel.ISupportInitialize)item1).EndInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Health).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Idle).EndInit();
             ResumeLayout(false);
         }
 
@@ -828,7 +1016,7 @@
         private PictureBox pictureBox25;
         private PictureBox pictureBox26;
         private PictureBox pictureBox27;
-        private PictureBox SlimeBoss;
+        private PictureBox mob3;
         private PictureBox Player;
         private PictureBox mob1;
         private PictureBox mob2;
@@ -860,5 +1048,18 @@
         private PictureBox item2;
         private PictureBox item1;
         private PictureBox OPEN;
+        private Panel panel2;
+        private Label GoldPrint;
+        private PictureBox Health;
+        private Label Stat5;
+        private Label Stat4;
+        private Label Stat3;
+        private Label Stat2;
+        private Label Stat1;
+        private PictureBox Idle;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label11;
     }
 }
