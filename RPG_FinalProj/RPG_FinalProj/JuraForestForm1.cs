@@ -129,8 +129,8 @@ namespace RPG_FinalProj
 
         private void JuraForestForm1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(
-              Program.items.playerHealth.ToString() + "/" + Program.items.Maxhealth.ToString());
+            //MessageBox.Show(Program.items.playerHealth.ToString() + "/" + Program.items.Maxhealth.ToString());
+            //for debugging purposses
             warrior[2] = Properties.Resources.sword_walk_front;
             warrior[1] = Properties.Resources.sword_walk_left;
             warrior[0] = Properties.Resources.sword_walk_back;
@@ -415,6 +415,7 @@ namespace RPG_FinalProj
             for (int x = 0; x < item.Length; x++)
             {
                 itemlb[x].Text = "";
+                item[x].Image = null;
             }
             for (int x = 0; x < itemlb.Length; x++)
             {

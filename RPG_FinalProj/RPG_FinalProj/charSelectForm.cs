@@ -156,8 +156,8 @@ namespace RPG_FinalProj
             if (radioButton1.Checked == true) { select = 1; }
             else if (radioButton2.Checked == true) { select = 3; }
             else if (radioButton3.Checked == true) { select = 2; }
-            MessageBox.Show(
-              Program.items.playerHealth.ToString() + "/" + Program.items.Maxhealth.ToString());
+            //MessageBox.Show(Program.items.playerHealth.ToString() + "/" + Program.items.Maxhealth.ToString());
+            //For debugging purposes
             if (remaining == 0 && select != 0)
             {
                 if (select == 1)
@@ -188,9 +188,9 @@ namespace RPG_FinalProj
                     Program.items.Maxhealth = Program.items.playerHealth;
                     Program.items.classSelected = 2;
                 }
-                else if (select == 2)
+                else if (select == 3)
                 {
-                    Program.items.playerstats[0] = 10;
+                    Program.items.playerstats[0] = 0;
                     Program.items.playerstats[1] = strength + 70;
                     Program.items.playerstats[2] = 0;
                     Program.items.playerstats[3] = 0;

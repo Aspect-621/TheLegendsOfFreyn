@@ -87,7 +87,7 @@
             radioButton4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             radioButton4.Location = new Point(358, 522);
             radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(141, 36);
+            radioButton4.Size = new Size(270, 36);
             radioButton4.TabIndex = 3;
             radioButton4.TabStop = true;
             radioButton4.Text = "radioButton4";

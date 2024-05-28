@@ -421,6 +421,7 @@ namespace RPG_FinalProj
             for (int x = 0; x < item.Length; x++)
             {
                 itemlb[x].Text = "";
+                item[x].Image = null;
             }
             for (int x = 0; x < itemlb.Length; x++)
             {
@@ -504,7 +505,7 @@ namespace RPG_FinalProj
             {
                 buy = (int)clickedButton.Tag;
                 buying = merch3index[buy];
-                MessageBox.Show(buy.ToString() + "   " + merch3index[buy].ToString());
+                //MessageBox.Show(buy.ToString() + "   " + merch3index[buy].ToString());
             }
         }
         public void printmerch3()
@@ -553,14 +554,14 @@ namespace RPG_FinalProj
                 {
                     if (Program.dialogues.Crest1 == false)
                     {
-                        MessageBox.Show("completer the objective first");
+                        MessageBox.Show("Complete the objective first");
                     }
                     else
                     {
                         currentText = dialogues.CCSQ1();
                         Program.dialogues.CSQ1++;
                         Program.dialogues.currentQuest = "Crest1";
-                        MessageBox.Show("Tapos na yung quest");
+                        MessageBox.Show("You have completed the quest!");
                     }
                 }
                 else

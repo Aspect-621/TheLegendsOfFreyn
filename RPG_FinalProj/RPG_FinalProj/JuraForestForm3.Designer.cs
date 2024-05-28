@@ -162,7 +162,7 @@
             // 
             pictureBox2.Location = new Point(662, 266);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(153, 439);
+            pictureBox2.Size = new Size(141, 439);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
@@ -248,9 +248,9 @@
             // 
             // pictureBox13
             // 
-            pictureBox13.Location = new Point(860, 707);
+            pictureBox13.Location = new Point(869, 707);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(71, 70);
+            pictureBox13.Size = new Size(62, 70);
             pictureBox13.TabIndex = 12;
             pictureBox13.TabStop = false;
             // 
@@ -443,7 +443,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 191);
+            panel1.Location = new Point(463, 177);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 58;

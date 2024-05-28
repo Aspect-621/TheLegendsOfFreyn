@@ -545,20 +545,24 @@
             // mob1
             // 
             mob1.AccessibleName = "Ogre";
-            mob1.BackColor = SystemColors.ActiveCaptionText;
+            mob1.BackColor = Color.Transparent;
+            mob1.Image = (Image)resources.GetObject("mob1.Image");
             mob1.Location = new Point(1146, 166);
             mob1.Name = "mob1";
-            mob1.Size = new Size(40, 40);
+            mob1.Size = new Size(70, 70);
+            mob1.SizeMode = PictureBoxSizeMode.StretchImage;
             mob1.TabIndex = 44;
             mob1.TabStop = false;
             // 
             // mob2
             // 
             mob2.AccessibleName = "Wolf";
-            mob2.BackColor = SystemColors.ActiveCaptionText;
+            mob2.BackColor = Color.Transparent;
+            mob2.Image = (Image)resources.GetObject("mob2.Image");
             mob2.Location = new Point(628, 584);
             mob2.Name = "mob2";
-            mob2.Size = new Size(40, 40);
+            mob2.Size = new Size(70, 70);
+            mob2.SizeMode = PictureBoxSizeMode.StretchImage;
             mob2.TabIndex = 45;
             mob2.TabStop = false;
             // 
@@ -642,7 +646,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 189);
+            panel1.Location = new Point(423, 150);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 59;

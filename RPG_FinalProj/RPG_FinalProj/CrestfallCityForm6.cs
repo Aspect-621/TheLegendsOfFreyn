@@ -362,6 +362,7 @@ namespace RPG_FinalProj
             for (int x = 0; x < item.Length; x++)
             {
                 itemlb[x].Text = "";
+                item[x].Image = null;
             }
             for (int x = 0; x < itemlb.Length; x++)
             {

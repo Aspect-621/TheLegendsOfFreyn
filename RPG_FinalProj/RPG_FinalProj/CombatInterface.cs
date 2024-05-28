@@ -473,7 +473,7 @@ namespace RPG_FinalProj
         {
             if (x == 1)
             {
-                label1.Text = "Attack Selected " + playerSkill[chosenskill] + "\n" + damage[1].ToString() + "---" + Program.items.playerHealth.ToString();
+                label1.Text = "Attack Selected " + playerSkill[damage[0]-1] + "\n" + damage[1].ToString() + "---" + Program.items.playerHealth.ToString();
                 if (damage[6] != 0)
                 {
                     label1.Text += "\n additional Damage " + damage[6].ToString();

@@ -216,10 +216,12 @@
             // mob1
             // 
             mob1.AccessibleName = "Skeleton";
-            mob1.BackColor = SystemColors.ActiveCaptionText;
+            mob1.BackColor = Color.Transparent;
+            mob1.Image = (Image)resources.GetObject("mob1.Image");
             mob1.Location = new Point(222, 428);
             mob1.Name = "mob1";
-            mob1.Size = new Size(40, 40);
+            mob1.Size = new Size(60, 60);
+            mob1.SizeMode = PictureBoxSizeMode.StretchImage;
             mob1.TabIndex = 11;
             mob1.TabStop = false;
             // 

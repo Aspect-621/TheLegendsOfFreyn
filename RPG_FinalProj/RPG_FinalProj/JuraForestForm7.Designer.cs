@@ -117,6 +117,7 @@
             label3 = new Label();
             label4 = new Label();
             label11 = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)Player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -515,7 +516,7 @@
             // mob3
             // 
             mob3.AccessibleName = "Jura1";
-            mob3.BackColor = Color.Red;
+            mob3.BackColor = Color.Transparent;
             mob3.Location = new Point(96, 227);
             mob3.Name = "mob3";
             mob3.Size = new Size(341, 286);
@@ -836,7 +837,7 @@
             // 
             // QuestButton
             // 
-            QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.BackColor = Color.AliceBlue;
             QuestButton.Location = new Point(2, 588);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);
@@ -1035,6 +1036,18 @@
             label11.TabIndex = 11;
             label11.Text = "USE ITEM";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Showcard Gothic", 20F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(92, 317);
+            label1.Name = "label1";
+            label1.Size = new Size(351, 33);
+            label1.TabIndex = 70;
+            label1.Text = "Quest Available Here!";
+            // 
             // JuraForestForm7
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1042,6 +1055,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(label1);
             Controls.Add(panel2);
             Controls.Add(Box);
             Controls.Add(QuestButton);
@@ -1163,6 +1177,7 @@
             ((System.ComponentModel.ISupportInitialize)Health).EndInit();
             ((System.ComponentModel.ISupportInitialize)Idle).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1254,5 +1269,6 @@
         private Label label3;
         private Label label4;
         private Label label11;
+        private Label label1;
     }
 }

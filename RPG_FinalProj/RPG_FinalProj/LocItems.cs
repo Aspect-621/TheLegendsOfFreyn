@@ -122,144 +122,146 @@ namespace RPG_FinalProj
         public void itemuse(int item)
         {
             Random random = new Random();
-            if (item == 0)
+            if (itemquan[item] != 0)
             {
-                playerstats[random.Next(0, 7)] += 15;
-            }
-            else if (item == 1)
-            {
-                playerHealth += 300;
-            }
-            else if (item == 2)
-            {
-                playerstats[7] += 10;
-                playerHealth = playerstats[7] * 20 + 200;
-                
-            }
-            else if (item == 3)
-            {
-                for (int x = 0; x < playerstats.Length; x++)
+                if (item == 0)
                 {
-                    playerstats[x] += 5;
+                    playerstats[random.Next(0, 7)] += 15;
+                }
+                else if (item == 1)
+                {
+                    playerHealth += 300;
+                }
+                else if (item == 2)
+                {
+                    playerstats[7] += 10;
+                    playerHealth = playerstats[7] * 20 + 200;
+
+                }
+                else if (item == 3)
+                {
+                    for (int x = 0; x < playerstats.Length; x++)
+                    {
+                        playerstats[x] += 5;
+                    }
+                }
+                else if (item == 4)
+                {
+                    int[] itemadd = { 5, 0, 20, 10, 15, 5, 10, 10 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 5)
+                {
+                    int[] itemadd = { 10, 0, 40, 20, 30, 10, 10, 15 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 6)
+                {
+                    int[] itemadd = { 5, 0, 5, 0, 10, 10, 10, 10 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 7)
+                {
+                    int[] itemadd = { 0, 30, 10, 10, 15, 15, 15, 40 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 8)
+                {
+                    int[] itemadd = { 0, 50, 10, 30, 15, 15, 10, 10 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 9)
+                {
+                    int[] itemadd = { 15, 15, 15, 15, 10, 10, 10, 10 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 10)
+                {
+                    int[] itemadd = { 25, 0, 50, 50, 25, 5, 10, 40 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 11)
+                {
+                    int[] itemadd = { 15, 15, 15, 15, 10, 10, 10, 10 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 12)
+                {
+                    int[] itemadd = { 20, 0, 0, 0, 40, 10, 10, 0 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 13)
+                {
+                    int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 0 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 14)
+                {
+                    int[] itemadd = { 0, 50, 0, 0, 10, 10, 10, 0 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 15)
+                {
+                    int[] itemadd = { 20, 0, 0, 0, 60, 10, 10, 0 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 16)
+                {
+                    int[] itemadd = { 0, 70, 0, 0, 10, 10, 10, 0 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 17)
+                {
+                    int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 20 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 18)
+                {
+                    int[] itemadd = { 10, 0, 0, 0, 10, 40, 40, 20 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                else if (item == 19)
+                {
+                    int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 20 };
+                    addstats("minus", itemusedStats);
+                    itemusedStats = itemadd;
+                    addstats("add", itemusedStats);
+                }
+                if (item < 4)
+                {
+                    itemquan[item]--;
                 }
             }
-            else if (item == 4)
-            {
-                int[] itemadd = {5,0,20,10,15,5,10,10};
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 5)
-            {
-                int[] itemadd = { 10, 0, 40, 20, 30, 10, 10, 15 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 6)
-            {
-                int[] itemadd = { 5, 0, 5, 0, 10, 10, 10, 10 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 7)
-            {
-                int[] itemadd = { 0, 30, 10, 10, 15, 15, 15, 40 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 8)
-            {
-                int[] itemadd = { 0, 50, 10, 30, 15, 15, 10, 10 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 9)
-            {
-                int[] itemadd = { 15, 15, 15, 15, 10, 10, 10, 10 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 10)
-            {
-                int[] itemadd = { 25, 0, 50, 50, 25, 5, 10, 40 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 11)
-            {
-                int[] itemadd = { 15, 15, 15, 15, 10, 10, 10, 10 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 12)
-            {
-                int[] itemadd = { 20, 0, 0, 0, 40, 10, 10, 0 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 13)
-            {
-                int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 0 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 14)
-            {
-                int[] itemadd = {0, 50, 0, 0, 10, 10, 10, 0 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 15)
-            {
-                int[] itemadd = { 20, 0, 0, 0, 60, 10, 10, 0 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 16)
-            {
-                int[] itemadd = { 0, 70, 0, 0, 10, 10, 10, 0 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 17)
-            {
-                int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 20 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 18)
-            {
-                int[] itemadd = { 10, 0, 0, 0, 10, 40, 40, 20 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            else if (item == 19)
-            {
-                int[] itemadd = { 50, 0, 0, 0, 10, 10, 10, 20 };
-                addstats("minus", itemusedStats);
-                itemusedStats = itemadd;
-                addstats("add", itemusedStats);
-            }
-            if (item < 4)
-            {
-                itemquan[item]--;
-            }
-
         }
         public int[] availableItems()
         {

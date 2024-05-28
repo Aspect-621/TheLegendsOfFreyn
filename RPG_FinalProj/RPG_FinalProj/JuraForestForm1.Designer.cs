@@ -315,30 +315,38 @@
             // mob1
             // 
             mob1.AccessibleName = "Goblin";
-            mob1.BackColor = SystemColors.ActiveCaptionText;
+            mob1.BackColor = Color.Transparent;
+            mob1.Image = (Image)resources.GetObject("mob1.Image");
             mob1.Location = new Point(969, 161);
             mob1.Name = "mob1";
-            mob1.Size = new Size(40, 40);
+            mob1.Size = new Size(60, 60);
+            mob1.SizeMode = PictureBoxSizeMode.StretchImage;
             mob1.TabIndex = 18;
             mob1.TabStop = false;
             // 
             // mob2
             // 
             mob2.AccessibleName = "Slime";
-            mob2.BackColor = SystemColors.ActiveCaptionText;
-            mob2.Location = new Point(1040, 842);
+            mob2.BackColor = Color.Transparent;
+            mob2.BackgroundImageLayout = ImageLayout.Stretch;
+            mob2.Image = (Image)resources.GetObject("mob2.Image");
+            mob2.Location = new Point(978, 852);
             mob2.Name = "mob2";
-            mob2.Size = new Size(40, 40);
+            mob2.Size = new Size(60, 60);
+            mob2.SizeMode = PictureBoxSizeMode.StretchImage;
             mob2.TabIndex = 19;
             mob2.TabStop = false;
             // 
             // mob3
             // 
             mob3.AccessibleName = "Goblin";
-            mob3.BackColor = SystemColors.ActiveCaptionText;
+            mob3.BackColor = Color.Transparent;
+            mob3.BackgroundImageLayout = ImageLayout.Stretch;
+            mob3.Image = (Image)resources.GetObject("mob3.Image");
             mob3.Location = new Point(544, 798);
             mob3.Name = "mob3";
-            mob3.Size = new Size(40, 40);
+            mob3.Size = new Size(60, 60);
+            mob3.SizeMode = PictureBoxSizeMode.StretchImage;
             mob3.TabIndex = 20;
             mob3.TabStop = false;
             // 

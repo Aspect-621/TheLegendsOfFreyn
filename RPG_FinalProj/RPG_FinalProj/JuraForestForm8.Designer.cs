@@ -111,6 +111,7 @@
             label11 = new Label();
             mob3 = new PictureBox();
             panel3 = new Panel();
+            label1 = new Label();
             disk4 = new PictureBox();
             disk3 = new PictureBox();
             disk2 = new PictureBox();
@@ -120,7 +121,6 @@
             Timer = new Label();
             Counter = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -973,10 +973,12 @@
             // mob3
             // 
             mob3.AccessibleName = "Puzzle2";
-            mob3.BackColor = SystemColors.ActiveCaptionText;
+            mob3.BackColor = Color.Transparent;
+            mob3.Image = (Image)resources.GetObject("mob3.Image");
             mob3.Location = new Point(1169, 150);
             mob3.Name = "mob3";
             mob3.Size = new Size(40, 40);
+            mob3.SizeMode = PictureBoxSizeMode.StretchImage;
             mob3.TabIndex = 70;
             mob3.TabStop = false;
             // 
@@ -999,43 +1001,63 @@
             panel3.Size = new Size(550, 550);
             panel3.TabIndex = 64;
             panel3.Visible = false;
+            panel3.Paint += panel3_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Cooper Black", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(99, 387);
+            label1.Name = "label1";
+            label1.Size = new Size(373, 21);
+            label1.TabIndex = 35;
+            label1.Text = "Click on the targers to start the game";
             // 
             // disk4
             // 
-            disk4.BackColor = Color.White;
+            disk4.BackColor = Color.Transparent;
+            disk4.Image = (Image)resources.GetObject("disk4.Image");
             disk4.Location = new Point(404, 253);
             disk4.Name = "disk4";
             disk4.Size = new Size(52, 52);
+            disk4.SizeMode = PictureBoxSizeMode.CenterImage;
             disk4.TabIndex = 34;
             disk4.TabStop = false;
             disk4.Click += disk4_Click;
             // 
             // disk3
             // 
-            disk3.BackColor = Color.White;
+            disk3.BackColor = Color.Transparent;
+            disk3.Image = (Image)resources.GetObject("disk3.Image");
             disk3.Location = new Point(170, 231);
             disk3.Name = "disk3";
             disk3.Size = new Size(54, 54);
+            disk3.SizeMode = PictureBoxSizeMode.CenterImage;
             disk3.TabIndex = 33;
             disk3.TabStop = false;
             disk3.Click += disk3_Click;
             // 
             // disk2
             // 
-            disk2.BackColor = Color.White;
+            disk2.BackColor = Color.Transparent;
+            disk2.Image = (Image)resources.GetObject("disk2.Image");
             disk2.Location = new Point(357, 60);
             disk2.Name = "disk2";
             disk2.Size = new Size(63, 63);
+            disk2.SizeMode = PictureBoxSizeMode.CenterImage;
             disk2.TabIndex = 32;
             disk2.TabStop = false;
             disk2.Click += disk2_Click;
             // 
             // disk1
             // 
-            disk1.BackColor = Color.White;
+            disk1.BackColor = Color.Transparent;
+            disk1.Image = (Image)resources.GetObject("disk1.Image");
             disk1.Location = new Point(50, 53);
             disk1.Name = "disk1";
             disk1.Size = new Size(62, 62);
+            disk1.SizeMode = PictureBoxSizeMode.CenterImage;
             disk1.TabIndex = 31;
             disk1.TabStop = false;
             disk1.Click += disk1_Click;
@@ -1084,17 +1106,6 @@
             // 
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cooper Black", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(99, 387);
-            label1.Name = "label1";
-            label1.Size = new Size(373, 21);
-            label1.TabIndex = 35;
-            label1.Text = "Click on the targers to start the game";
             // 
             // JuraForestForm8
             // 

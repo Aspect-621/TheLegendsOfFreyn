@@ -401,6 +401,9 @@ namespace RPG_FinalProj
             else if (entityType[0] == 17)
             {
                 panel3.Visible = true;
+                timer = 0;
+                counter = 0;
+
             }
         }
 
@@ -415,6 +418,7 @@ namespace RPG_FinalProj
             for (int x = 0; x < item.Length; x++)
             {
                 itemlb[x].Text = "";
+                item[x].Image = null;
             }
             for (int x = 0; x < itemlb.Length; x++)
             {
@@ -557,6 +561,7 @@ namespace RPG_FinalProj
             {
                 timer1.Enabled = true;
                 timer = 0;
+                counter = 0;
             }
             counter++;
             disk2.Location = new Point(random.Next(550 - (disk2.Width)), random.Next(387 - (disk2.Height)));
@@ -569,6 +574,7 @@ namespace RPG_FinalProj
             {
                 timer1.Enabled = true;
                 timer = 0;
+                counter = 0;
             }
             counter++;
             disk3.Location = new Point(random.Next(550 - (disk3.Width)), random.Next(387 - (disk3.Height)));
@@ -581,6 +587,7 @@ namespace RPG_FinalProj
             {
                 timer1.Enabled = true;
                 timer = 0;
+                counter = 0;
             }
             counter++;
             disk4.Location = new Point(random.Next(550 - (disk4.Width)), random.Next(387 - (disk4.Height)));
@@ -594,7 +601,7 @@ namespace RPG_FinalProj
             if (timer == 30)
             {
                 Program.items.gold += counter * 4;
-                MessageBox.Show("You hit " + counter.ToString() + "you are rewarded with " + (counter * 4) + "gold");
+                MessageBox.Show("You hit " + counter.ToString() + ". \nYou are rewarded with " + (counter * 4) + "gold");
             }
         }
 
@@ -603,6 +610,11 @@ namespace RPG_FinalProj
             timer1.Enabled = false;
             timer = 0;
             panel3.Visible = false;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
