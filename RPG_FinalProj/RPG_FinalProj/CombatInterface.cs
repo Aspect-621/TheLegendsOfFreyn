@@ -103,7 +103,7 @@ namespace RPG_FinalProj
                 {
                     mobstats[x] = random.Next(40, 50);
                     mobHealth = mobstats[6] * 10 + 300;
-                    EnemyPic.Image = Properties.Resources.goblin_idle;
+                    EnemyPic.Image = Properties.Resources.ogre_idle;
                     EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
@@ -114,7 +114,7 @@ namespace RPG_FinalProj
                 {
                     mobstats[x] = random.Next(30, 40); 
                     mobHealth = mobstats[6] * 8 + 300;
-                    EnemyPic.Image = Properties.Resources.ogre_idle;
+                    EnemyPic.Image = Properties.Resources.wolf_attack;
                     EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
@@ -158,7 +158,7 @@ namespace RPG_FinalProj
                 {
                     mobstats[x] = random.Next(45, 50);
                     mobHealth = mobstats[6] * 8 + 200;
-                    EnemyPic.Image = Properties.Resources.skeleton_idle;
+                    EnemyPic.Image = Properties.Resources.skeleton_attack;
                     EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }

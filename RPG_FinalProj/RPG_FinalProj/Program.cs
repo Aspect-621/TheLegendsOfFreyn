@@ -15,7 +15,7 @@ namespace RPG_FinalProj
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CrestfallCityForm2());
+            Application.Run(new charSelectForm());
         }
     }
 }

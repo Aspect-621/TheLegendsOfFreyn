@@ -99,7 +99,7 @@ namespace RPG_FinalProj
                     {
                         return new int[] { 2, i };
                     }
-                    else if (mob[i] == "wolf")
+                    else if (mob[i] == "Wolf")
                     {
                         return new int[] { 3, i };
                     }

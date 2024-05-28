@@ -124,8 +124,8 @@
   <data name="10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sword-walk-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sword-walk-left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="charSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +166,8 @@
   <data name="17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Merchant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Merchant1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warewolf-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warewolf-idle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sword-walk-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sword-walk-left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="goblin-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goblin-idle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +177,9 @@
   </data>
   <data name="pixel-art-interface-vector-12492955-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixel-art-interface-vector-12492955-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,9 +241,6 @@
   <data name="Arrow Alt Circle Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arrow Alt Circle Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="charSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\charSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mage-walk-rigth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mage-walk-rigth.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -255,6 +252,9 @@
   </data>
   <data name="2.1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warewolf-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warewolf-idle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,6 +285,9 @@
   </data>
   <data name="mage-atttack-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mage-atttack-back.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mage-walk-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mage-walk-back.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,10 +337,58 @@
   <data name="Archer-attack-front" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Archer-attack-front.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Merchant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Merchant1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="collect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\collect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="goblin-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblin-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goblin-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goblin-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gorgoyle-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gorgoyle-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gorgoyle-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gorgoyle-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenSlime-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenSlime-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenSlime-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenSlime-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ofre-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ofre-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ogre-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ogre-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skeleton-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skeleton-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skeleton-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skeleton-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slimeKingAttack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slimeKingAttack1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slimeKing-attack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slimeKing-attack1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slimeKing-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slimeKing-idle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warewolf-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warewolf-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warewolf-idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warewolf-idle1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wolf-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wolf-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wolf-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wolf-idle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

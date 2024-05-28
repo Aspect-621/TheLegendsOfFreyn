@@ -546,7 +546,7 @@
             // 
             mob1.AccessibleName = "Ogre";
             mob1.BackColor = Color.Transparent;
-            mob1.Image = (Image)resources.GetObject("mob1.Image");
+            mob1.Image = Properties.Resources.ogre_idle;
             mob1.Location = new Point(1146, 166);
             mob1.Name = "mob1";
             mob1.Size = new Size(70, 70);
@@ -646,7 +646,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(423, 150);
+            panel1.Location = new Point(409, 166);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 59;

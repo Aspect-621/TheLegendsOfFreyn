@@ -323,7 +323,7 @@
             // mob1
             // 
             mob1.AccessibleName = "Crest4";
-            mob1.BackColor = Color.Red;
+            mob1.BackColor = Color.WhiteSmoke;
             mob1.Location = new Point(973, 609);
             mob1.Name = "mob1";
             mob1.Size = new Size(35, 35);
@@ -677,9 +677,11 @@
             // QuestButton
             // 
             QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.Image = (Image)resources.GetObject("QuestButton.Image");
             QuestButton.Location = new Point(1312, 923);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);
+            QuestButton.SizeMode = PictureBoxSizeMode.StretchImage;
             QuestButton.TabIndex = 82;
             QuestButton.TabStop = false;
             QuestButton.Click += QuestButton_Click;

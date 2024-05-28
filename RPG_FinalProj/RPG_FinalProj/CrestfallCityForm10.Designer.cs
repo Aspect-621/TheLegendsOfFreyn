@@ -563,7 +563,7 @@
             // 
             // EasterEgg
             // 
-            EasterEgg.BackColor = Color.IndianRed;
+            EasterEgg.BackColor = Color.Transparent;
             EasterEgg.Location = new Point(699, 795);
             EasterEgg.Name = "EasterEgg";
             EasterEgg.Size = new Size(35, 35);
@@ -572,7 +572,7 @@
             // 
             // Puzzle
             // 
-            Puzzle.BackColor = Color.Red;
+            Puzzle.BackColor = Color.Transparent;
             Puzzle.Location = new Point(715, 392);
             Puzzle.Name = "Puzzle";
             Puzzle.Size = new Size(35, 35);
@@ -1052,7 +1052,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 189);
+            panel1.Location = new Point(444, 138);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 74;

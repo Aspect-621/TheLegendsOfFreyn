@@ -33,9 +33,7 @@ namespace RPG_FinalProj
         public int[] quan1 = { 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public int[] merchant3price = {0, 700, 150, 500, 2000, 1700, 0, 0, 0, 2500, 0, 0, 0, 2500, 0, 0, 0, 4000, 2500, 0 };
-
         public int[] merchant2price = {0, 700, 150, 500, 2000, 0, 2000, 0, 2300, 0, 1900, 0, 0, 0, 3000, 0, 4000, 0, 0, 0  };
-
         public int[] merchant1price = {0, 700, 150, 500, 2000, 0, 0, 1800, 0, 0, 0, 3000, 0, 2700, 0, 2800, 0, 0, 0, 3000 };
         public int[] location;
         public int classSelected = 2;
