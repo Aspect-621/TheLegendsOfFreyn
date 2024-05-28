@@ -72,32 +72,6 @@ namespace RPG_FinalProj
             set { itemquan = value; }
         }
 
-        public void saleValidation1(int gold, int x)
-        {
-            if (gold > merchant1price[x])
-            {
-
-            }
-        }
-        public void setlocation(int index, int value)
-        {
-            location1[index] = value;
-        }
-        public void Setquest1(int index, string value)
-        {
-            name[index] = value;
-        }
-
-        public void setstats(int index, int value)
-        {
-            playerstats[index] = value;
-            if (index == 7)
-            {
-                playerHealth = playerstats[7] * 15 + 300;
-                Maxhealth = playerHealth;
-            }
-        }
-
         public void addstats(string operation, int[] value)
         {
             if (operation == "add")

@@ -262,7 +262,6 @@ namespace RPG_FinalProj
             }
 
             Player.Location = new Point(Program.items.location[0], Program.items.location[1]);
-            
         }
         int lastkey;
         private void JuraForestForm1_KeyDown_1(object sender, KeyEventArgs e)
