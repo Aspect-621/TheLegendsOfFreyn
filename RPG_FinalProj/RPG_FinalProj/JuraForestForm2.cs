@@ -208,7 +208,25 @@ namespace RPG_FinalProj
             }
 
         }
+        private void Item_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedButton = sender as PictureBox;
+            if (clickedButton != null)
+            {
+                select = (int)clickedButton.Tag;
+                current = itemindex[select + starting];
+                Select.BackgroundImage = Properties.Resources.item0;
+                select1.Text = itemquan[current].ToString();
+            }
+        }
 
+        private void UseItem_Click(object sender, EventArgs e)
+        {
+            if (current != 0)
+            {
+                Program.items.itemuse(current);
+            }
+        }
         private void JuraForestForm2_KeyDown_1(object sender, KeyEventArgs e)
         {
             int leftPosition, topPosition, rightPosition, bottomPosition;
@@ -325,24 +343,8 @@ namespace RPG_FinalProj
             }
         }
         int select, current;
-        private void Item_Click(object sender, EventArgs e)
-        {
-            PictureBox clickedButton = sender as PictureBox;
-            if (clickedButton != null)
-            {
-                select = (int)clickedButton.Tag;
-                current = itemindex[select + starting];
-                select1.Text = itemquan[current].ToString();
-            }
-        }
-
-        private void UseItem_Click(object sender, EventArgs e)
-        {
-            if (current != 0)
-            {
-                Program.items.itemuse(current);
-            }
-        }
+        
+      
 
         private void pictureBox29_Click(object sender, EventArgs e)
         {

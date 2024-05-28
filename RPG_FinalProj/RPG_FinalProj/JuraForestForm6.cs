@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,11 +20,11 @@ namespace RPG_FinalProj
         PictureBox[] mob = new PictureBox[3];
         int[,] moblocation = new int[3, 4];
         string[] mobnames = new string[3];
-        Label[] itemlb = new Label[9];
+        System.Windows.Forms.Label[] itemlb = new System.Windows.Forms.Label[9];
         PictureBox[] item = new PictureBox[9];
 
         PictureBox[] sell = new PictureBox[9];
-        Label[] price = new Label[9];
+        System.Windows.Forms.Label[] price = new System.Windows.Forms.Label[9];
         public JuraForestForm6()
         {
             InitializeComponent();
@@ -475,6 +476,10 @@ namespace RPG_FinalProj
         private void pictureBox47_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
         }
     }
 }

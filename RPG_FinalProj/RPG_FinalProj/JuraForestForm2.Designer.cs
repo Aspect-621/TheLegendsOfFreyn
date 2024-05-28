@@ -722,7 +722,7 @@
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
             Name = "JuraForestForm2";
-            Text = "s";
+            Text = "JuraForestForm2";
             Load += JuraForestForm2_Load;
             KeyDown += JuraForestForm2_KeyDown_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

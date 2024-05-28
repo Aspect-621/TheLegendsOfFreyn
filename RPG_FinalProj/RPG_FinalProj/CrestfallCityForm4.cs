@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trial1_Movement_Classes_COMPROGPROJ;
 
 namespace RPG_FinalProj
 {
     public partial class CrestfallCityForm4 : Form
     {
         private readonly LocItems _items;
-
+        private readonly quest1Dialogue dialogues;
         int[,] obstacles = new int[24, 4];
         PictureBox[] obstacle = new PictureBox[24];
         PictureBox[] mob = new PictureBox[1];
@@ -26,6 +27,7 @@ namespace RPG_FinalProj
         {
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
             item1.Tag = 0;
             item2.Tag = 1;
             item3.Tag = 2;
@@ -123,6 +125,8 @@ namespace RPG_FinalProj
 
         private void CrestfallCityForm4_Load(object sender, EventArgs e)
         {
+            Box.Visible = false;
+            QuestButton.Visible = false;
             item[0] = item1;
             item[1] = item2;
             item[2] = item3;
@@ -212,20 +216,17 @@ namespace RPG_FinalProj
             newPos[1] = Player.Location.Y;
             newPos[2] = Player.Location.X + Player.Size.Width;
             newPos[3] = Player.Location.Y + Player.Size.Height;
-            newPosition.collisionChecker(newPos, moblocation, mobnames);
+            entityType = newPosition.collisionChecker(newPos, moblocation, mobnames);
             TeleportChecker(newPos, moblocation, mobnames);
             InteractionChecker();
         }
-        int entityType = 0;
+        int[] entityType = { 0, 0 };
         private void InteractionChecker()
         {
-            if (entityType == 1)
+            QuestButton.Visible = false;
+            if (entityType[0] == 12)
             {
-                MessageBox.Show("Combat");
-            }
-            else if (entityType == 2)
-            {
-
+                QuestButton.Visible = true;
             }
         }
 
@@ -311,6 +312,58 @@ namespace RPG_FinalProj
         private void pictureBox59_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        string currentText;
+        int currentIndex;
+        private void QuestButton_Click(object sender, EventArgs e)
+        {
+            Box.Visible = true;
+            currentIndex = 0;
+            if (Program.dialogues.CSQ2 < 2 && (Program.dialogues.currentQuest == "Crest2" || Program.dialogues.currentQuest == ""))
+            {
+                if (Program.dialogues.CSQ2 == 1)
+                {
+                    if (Program.dialogues.Crest2 < 1)
+                    {
+                        MessageBox.Show("completer the objective first");
+                    }
+                    else
+                    {
+                        currentText = dialogues.CCSQ2();
+                        Program.dialogues.CSQ2++;
+                        Program.dialogues.currentQuest = "Crest2";
+                        MessageBox.Show("Tapos na yung quest");
+                    }
+                }
+                else
+                {
+                    currentText = dialogues.CCSQ2();
+                    Program.dialogues.CSQ2++;
+                    Program.dialogues.currentQuest = "Crest2";
+                }
+
+                if (Program.dialogues.CSQ2 == 2)
+                {
+                    Program.dialogues.currentQuest = "";
+                }
+            }
+            else { currentText = "Quest Alrady done"; }
+            Dialogue.Text = "";
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (currentIndex < currentText.Length)
+            {
+                Dialogue.Text += currentText[currentIndex];
+                currentIndex++;
+            }
+            else
+            {
+                timer1.Stop();
+            }
         }
     }
 }

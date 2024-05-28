@@ -326,6 +326,7 @@ namespace RPG_FinalProj
             {
                 select = (int)clickedButton.Tag;
                 current = itemindex[select + starting];
+                Select.BackgroundImage = Properties.Resources.item0; 
                 select1.Text = itemquan[current].ToString();
             }
         }
@@ -361,6 +362,11 @@ namespace RPG_FinalProj
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

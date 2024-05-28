@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrestfallCityForm4));
             Player = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -52,7 +53,7 @@
             pictureBox20 = new PictureBox();
             pictureBox21 = new PictureBox();
             pictureBox22 = new PictureBox();
-            SideQuest = new PictureBox();
+            mob2 = new PictureBox();
             pictureBox23 = new PictureBox();
             mob1 = new PictureBox();
             pictureBox24 = new PictureBox();
@@ -82,6 +83,10 @@
             item2 = new PictureBox();
             item1 = new PictureBox();
             OPEN = new PictureBox();
+            QuestButton = new PictureBox();
+            Box = new Panel();
+            Dialogue = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)Player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -105,7 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SideQuest).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mob2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
@@ -124,6 +129,8 @@
             ((System.ComponentModel.ISupportInitialize)item2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)item1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QuestButton).BeginInit();
+            Box.SuspendLayout();
             SuspendLayout();
             // 
             // Player
@@ -311,14 +318,15 @@
             pictureBox22.TabIndex = 22;
             pictureBox22.TabStop = false;
             // 
-            // SideQuest
+            // mob2
             // 
-            SideQuest.BackColor = Color.Red;
-            SideQuest.Location = new Point(704, 403);
-            SideQuest.Name = "SideQuest";
-            SideQuest.Size = new Size(67, 50);
-            SideQuest.TabIndex = 23;
-            SideQuest.TabStop = false;
+            mob2.AccessibleName = "Crest2";
+            mob2.BackColor = Color.Red;
+            mob2.Location = new Point(704, 403);
+            mob2.Name = "mob2";
+            mob2.Size = new Size(67, 50);
+            mob2.TabIndex = 23;
+            mob2.TabStop = false;
             // 
             // pictureBox23
             // 
@@ -635,6 +643,42 @@
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;
             // 
+            // QuestButton
+            // 
+            QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.Location = new Point(1312, 923);
+            QuestButton.Name = "QuestButton";
+            QuestButton.Size = new Size(100, 50);
+            QuestButton.TabIndex = 78;
+            QuestButton.TabStop = false;
+            QuestButton.Click += QuestButton_Click;
+            // 
+            // Box
+            // 
+            Box.BackColor = Color.Transparent;
+            Box.BackgroundImage = (Image)resources.GetObject("Box.BackgroundImage");
+            Box.BackgroundImageLayout = ImageLayout.Stretch;
+            Box.Controls.Add(Dialogue);
+            Box.Location = new Point(418, 833);
+            Box.Name = "Box";
+            Box.Size = new Size(603, 153);
+            Box.TabIndex = 79;
+            // 
+            // Dialogue
+            // 
+            Dialogue.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Dialogue.ForeColor = Color.White;
+            Dialogue.Location = new Point(75, 48);
+            Dialogue.Name = "Dialogue";
+            Dialogue.Size = new Size(454, 80);
+            Dialogue.TabIndex = 0;
+            Dialogue.Text = "label2";
+            Dialogue.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // CrestfallCityForm4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -642,12 +686,14 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(Box);
+            Controls.Add(QuestButton);
             Controls.Add(OPEN);
             Controls.Add(panel1);
             Controls.Add(mob1);
             Controls.Add(pictureBox24);
             Controls.Add(pictureBox23);
-            Controls.Add(SideQuest);
+            Controls.Add(mob2);
             Controls.Add(pictureBox22);
             Controls.Add(pictureBox21);
             Controls.Add(pictureBox20);
@@ -699,7 +745,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SideQuest).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mob2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
@@ -719,6 +765,8 @@
             ((System.ComponentModel.ISupportInitialize)item2).EndInit();
             ((System.ComponentModel.ISupportInitialize)item1).EndInit();
             ((System.ComponentModel.ISupportInitialize)OPEN).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QuestButton).EndInit();
+            Box.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -747,7 +795,7 @@
         private PictureBox pictureBox20;
         private PictureBox pictureBox21;
         private PictureBox pictureBox22;
-        private PictureBox SideQuest;
+        private PictureBox mob2;
         private PictureBox pictureBox23;
         private PictureBox mob1;
         private PictureBox pictureBox24;
@@ -777,5 +825,9 @@
         private PictureBox item2;
         private PictureBox item1;
         private PictureBox OPEN;
+        private PictureBox QuestButton;
+        private Panel Box;
+        private Label Dialogue;
+        private System.Windows.Forms.Timer timer1;
     }
 }

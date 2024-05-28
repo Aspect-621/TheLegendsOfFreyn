@@ -452,6 +452,7 @@
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 31;
             panel1.Visible = false;
+            panel1.Paint += panel1_Paint;
             // 
             // select1
             // 

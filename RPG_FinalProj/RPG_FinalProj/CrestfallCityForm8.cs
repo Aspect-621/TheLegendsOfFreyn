@@ -8,6 +8,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trial1_Movement_Classes_COMPROGPROJ;
 
 namespace RPG_FinalProj
 {
@@ -15,7 +16,7 @@ namespace RPG_FinalProj
     public partial class CrestfallCityForm8 : Form
     {
         private readonly LocItems _items;
-
+        private readonly quest1Dialogue dialogues;
         int[,] obstacles = new int[29, 4];
         PictureBox[] obstacle = new PictureBox[29];
         PictureBox[] mob = new PictureBox[5];
@@ -31,6 +32,7 @@ namespace RPG_FinalProj
 
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
             item1.Tag = 0;
             item2.Tag = 1;
             item3.Tag = 2;
@@ -75,6 +77,8 @@ namespace RPG_FinalProj
 
         private void CrestfallCityForm8_Load(object sender, EventArgs e)
         {
+            Box.Visible = false;
+            QuestButton.Visible = false;
             LocItems item1s = new LocItems();
             merch3index = item1s.Merchant3Items();
             merch3price = Program.items.merch3price;
@@ -285,6 +289,10 @@ namespace RPG_FinalProj
             {
                 Shop.Visible = false;
             }
+            else if (entityType[0] == 13)
+            {
+                QuestButton.Visible = true;
+            }
         }
 
         int[] itemindex;
@@ -412,6 +420,63 @@ namespace RPG_FinalProj
         private void pictureBox47_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void mob4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (currentIndex < currentText.Length)
+            {
+                Dialogue.Text += currentText[currentIndex];
+                currentIndex++;
+            }
+            else
+            {
+                timer1.Stop();
+            }
+        }
+
+        string currentText;
+        int currentIndex;
+        private void QuestButton_Click(object sender, EventArgs e)
+        {
+            Box.Visible = true;
+            currentIndex = 0;
+            if (Program.dialogues.CSQ3 < 2 && (Program.dialogues.currentQuest == "Crest3" || Program.dialogues.currentQuest == ""))
+            {
+                if (Program.dialogues.CSQ3 < 1)
+                {
+                    if (Program.dialogues.Crest3 < 5)
+                    {
+                        MessageBox.Show("completer the objective first");
+                    }
+                    else
+                    {
+                        currentText = dialogues.CCSQ3();
+                        Program.dialogues.CSQ3++;
+                        Program.dialogues.currentQuest = "Crest3";
+                        MessageBox.Show("Tapos na yung quest");
+                    }
+                }
+                else
+                {
+                    currentText = dialogues.CCSQ3();
+                    Program.dialogues.CSQ3++;
+                    Program.dialogues.currentQuest = "Crest3";
+                }
+
+                if (Program.dialogues.CSQ3 == 2)
+                {
+                    Program.dialogues.currentQuest = "";
+                }
+            }
+            else { currentText = "Quest Alrady done"; }
+            Dialogue.Text = "";
+            timer1.Enabled = true;
         }
     }
 }

@@ -199,7 +199,6 @@
             // 
             // mob1
             // 
-            mob1.AccessibleName = "Skeleton";
             mob1.BackColor = SystemColors.ActiveCaptionText;
             mob1.Location = new Point(222, 428);
             mob1.Name = "mob1";

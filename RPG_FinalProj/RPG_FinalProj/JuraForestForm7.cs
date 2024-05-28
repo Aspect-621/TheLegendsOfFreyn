@@ -5,9 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Numerics;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trial1_Movement_Classes_COMPROGPROJ;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Label = System.Windows.Forms.Label;
 
 namespace RPG_FinalProj
 {
@@ -16,18 +20,19 @@ namespace RPG_FinalProj
     public partial class JuraForestForm7 : Form
     {
         private readonly LocItems _items;
-
+        private readonly quest1Dialogue dialogues;
         int[,] obstacles = new int[40, 4];
         PictureBox[] obstacle = new PictureBox[40];
-        PictureBox[] mob = new PictureBox[2];
-        int[,] moblocation = new int[2, 4];
-        string[] mobnames = new string[2];
-        Label[] itemlb = new Label[9];
+        PictureBox[] mob = new PictureBox[3];
+        int[,] moblocation = new int[3, 4];
+        string[] mobnames = new string[3];
+        System.Windows.Forms.Label[] itemlb = new Label[9];
         PictureBox[] item = new PictureBox[9];
         public JuraForestForm7()
         {
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
             item1.Tag = 0;
             item2.Tag = 1;
             item3.Tag = 2;
@@ -129,6 +134,8 @@ namespace RPG_FinalProj
 
         private void JuraForestForm7_Load(object sender, EventArgs e)
         {
+            Box.Visible = false;
+            QuestButton.Visible = false;
             item[0] = item1;
             item[1] = item2;
             item[2] = item3;
@@ -233,53 +240,18 @@ namespace RPG_FinalProj
         int[] entityType = { 0, 0 };
         private void InteractionChecker()
         {
+            QuestButton.Visible = false;
             if (entityType[0] > 0 && entityType[0] <= 8)
             {
-                if (entityType[0] == 1)
-                {
-                    Program.items.enemyChosen = 1;
-                }
-                else if (entityType[0] == 2)
-                {
-                    Program.items.enemyChosen = 2;
-                }
-                else if (entityType[0] == 3)
-                {
-                    Program.items.enemyChosen = 3;
-                }
-                else if (entityType[0] == 4)
-                {
-                    Program.items.enemyChosen = 4;
-                }
-                else if (entityType[0] == 5)
-                {
-                    Program.items.enemyChosen = 5;
-                }
-                else if (entityType[0] == 6)
-                {
-                    Program.items.enemyChosen = 6;
-                }
-                else if (entityType[0] == 7)
-                {
-                    Program.items.enemyChosen = 7;
-                }
-                else if (entityType[0] == 8)
-                {
-                    Program.items.enemyChosen = 8;
-                }
-
-                Program.items.location[0] = Player.Location.X;
-                Program.items.location[1] = Player.Location.Y;
-                Program.items.currentForm = 6;
-                CombatInterface CI = new CombatInterface();
-                this.Hide();
-                CI.ShowDialog();
-                this.Close();
 
             }
             else if (entityType[0] == 9)
             {
 
+            }
+            else if (entityType[0] == 10)
+            {
+                QuestButton.Visible = true;
             }
         }
 
@@ -365,6 +337,58 @@ namespace RPG_FinalProj
         private void pictureBox47_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        string currentText;
+        int currentIndex;
+        private void QuestButton_Click(object sender, EventArgs e)
+        {
+            Box.Visible = true;
+            currentIndex = 0;
+            if (Program.dialogues.JSQ1 < 3 && (Program.dialogues.currentQuest == "Jura1" || Program.dialogues.currentQuest == ""))
+            {
+                if (Program.dialogues.JSQ1 == 2)
+                {
+                    if (Program.dialogues.Jura1[0] != 5 && Program.dialogues.Jura1[1] != 5)
+                    {
+                        MessageBox.Show("completer the objective first");
+                    }
+                    else
+                    {
+                        currentText = dialogues.CJSQ1();
+                        Program.dialogues.JSQ1++;
+                        Program.dialogues.currentQuest = "Jura1";
+                        MessageBox.Show("Tapos na yung quest");
+                    }
+                }
+                else
+                {
+                    currentText = dialogues.CJSQ1();
+                    Program.dialogues.JSQ1++;
+                    Program.dialogues.currentQuest = "Jura1";
+                }
+
+                if (Program.dialogues.JSQ1 == 3)
+                {
+                    Program.dialogues.currentQuest = "";
+                }
+            }
+            else { currentText = "Quest Alrady done"; }
+            Dialogue.Text = "";
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (currentIndex < currentText.Length)
+            {
+                Dialogue.Text += currentText[currentIndex];
+                currentIndex++;
+            }
+            else
+            {
+                timer1.Stop();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG_FinalProj;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -11,6 +12,12 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
     {
         Random random = new Random();
         private readonly questTracking QT;
+
+        public int[] Jura1 = { 0, 0 };
+        public bool Crest1 = false;
+        public int Crest2 = 0;
+        public int Crest3 = 0;
+        public int[] Crest4 = { 0, 0, 0, 0, 0 };
 
         public string currentQuest = "";
         public string currentObjective = "";
@@ -172,15 +179,15 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
         }
         public string CCSQ2()
         {
-            return CrestSQ1[CSQ2];
+            return CrestSQ2[CSQ2];
         }
         public string CCSQ3()
         {
-            return CrestSQ1[CSQ3];
+            return CrestSQ3[CSQ3];
         }
         public string CCSQ4()
         {
-            return CrestSQ1[CSQ4];
+            return CrestSQ4[CSQ4];
         }
 
         public string CDSQ1()
@@ -189,15 +196,15 @@ namespace Trial1_Movement_Classes_COMPROGPROJ
         }
         public string CDSQ2()
         {
-            return DeimosSQ1[DSQ2];
+            return DeimosSQ2[DSQ2];
         }
         public string CDSQ3()
         {
-            return DeimosSQ1[DSQ3];
+            return DeimosSQ3[DSQ3];
         }
         public string CDSQ4()
         {
-            return DeimosSQ1[DSQ4];
+            return DeimosSQ4[DSQ4];
         }
 
         public string Merchant()

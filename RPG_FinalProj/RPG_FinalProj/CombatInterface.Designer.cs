@@ -129,6 +129,7 @@
             label2.TabIndex = 7;
             label2.Text = "label2";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // CombatInterface
             // 

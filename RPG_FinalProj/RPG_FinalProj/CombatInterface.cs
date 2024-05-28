@@ -19,10 +19,12 @@ namespace RPG_FinalProj
         Random random = new Random();
         Form[] forms = new Form[20];
         private readonly LocItems _items;
+        private readonly quest1Dialogue dialogues;
         public CombatInterface()
         {
             InitializeComponent();
             _items = Program.items;
+            dialogues = Program.dialogues;
         }
 
         int chosenskill = 0;
@@ -83,7 +85,7 @@ namespace RPG_FinalProj
                 mobSkills = goblin.goblinSkills;
                 for (int x = 0; x < 7; x++)
                 {
-                    mobstats[x] = random.Next(30,40);
+                    mobstats[x] = random.Next(30, 40);
                 }
             }
             else if (enemy == 2)
@@ -147,7 +149,7 @@ namespace RPG_FinalProj
             {
                 playerSkill = PM.mageSkills;
             }
-            
+
             radioButton1.Text = playerSkill[0];
             radioButton2.Text = playerSkill[1];
             radioButton3.Text = playerSkill[2];
@@ -295,7 +297,56 @@ namespace RPG_FinalProj
                 this.Hide();
                 forms[Program.items.currentForm].ShowDialog();
                 this.Close();
-            }   
+
+                if (Program.dialogues.currentQuest == "Jura1")
+                {
+                    if (enemy == 8)
+                    {
+                        Program.dialogues.Jura1[0]++;
+                    }
+                    else if (enemy == 3)
+                    {
+                        Program.dialogues.Jura1[1]++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest2")
+                {
+                    if (enemy == 2)
+                    {
+                        Program.dialogues.Crest2++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest3")
+                {
+                    if (enemy == 1)
+                    {
+                        Program.dialogues.Crest2++;
+                    }
+                }
+                else if (Program.dialogues.currentQuest == "Crest4")
+                {
+                    if (enemy == 1)
+                    {
+                        Program.dialogues.Crest4[0]++;
+                    }
+                    else if (enemy == 2)
+                    {
+                        Program.dialogues.Crest4[1]++;
+                    }
+                    else if (enemy == 3)
+                    {
+                        Program.dialogues.Crest4[2]++;
+                    }
+                    else if (enemy == 8)
+                    {
+                        Program.dialogues.Crest4[3]++;
+                    }
+                    else if (enemy == 7)
+                    {
+                        Program.dialogues.Crest4[4]++;
+                    }
+                }
+            }
         }
 
         private void printdamage(int x, int[] damage)
@@ -316,6 +367,11 @@ namespace RPG_FinalProj
                     label2.Text += "\n additional Damage" + damage[6].ToString();
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrestfallCityForm2));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -35,9 +36,9 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
-            SideQuest = new PictureBox();
-            pictureBox8 = new PictureBox();
             mob2 = new PictureBox();
+            pictureBox8 = new PictureBox();
+            mob3 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -139,15 +140,19 @@
             sell2 = new PictureBox();
             sell1 = new PictureBox();
             Buy = new Label();
+            QuestButton = new PictureBox();
+            Box = new Panel();
+            Dialogue = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SideQuest).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mob2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -227,6 +232,8 @@
             ((System.ComponentModel.ISupportInitialize)sell3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)sell2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)sell1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QuestButton).BeginInit();
+            Box.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -277,14 +284,15 @@
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             // 
-            // SideQuest
+            // mob2
             // 
-            SideQuest.BackColor = Color.Red;
-            SideQuest.Location = new Point(593, 261);
-            SideQuest.Name = "SideQuest";
-            SideQuest.Size = new Size(234, 90);
-            SideQuest.TabIndex = 6;
-            SideQuest.TabStop = false;
+            mob2.AccessibleName = "Crest1";
+            mob2.BackColor = Color.Red;
+            mob2.Location = new Point(593, 261);
+            mob2.Name = "mob2";
+            mob2.Size = new Size(234, 90);
+            mob2.TabIndex = 6;
+            mob2.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -294,14 +302,15 @@
             pictureBox8.TabIndex = 7;
             pictureBox8.TabStop = false;
             // 
-            // mob2
+            // mob3
             // 
-            mob2.BackColor = Color.Red;
-            mob2.Location = new Point(1289, 164);
-            mob2.Name = "mob2";
-            mob2.Size = new Size(35, 35);
-            mob2.TabIndex = 8;
-            mob2.TabStop = false;
+            mob3.AccessibleName = "";
+            mob3.BackColor = Color.Red;
+            mob3.Location = new Point(1289, 164);
+            mob3.Name = "mob3";
+            mob3.Size = new Size(35, 35);
+            mob3.TabIndex = 8;
+            mob3.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -1257,6 +1266,42 @@
             Buy.Text = "BUY ITEM";
             Buy.Click += Buy_Click;
             // 
+            // QuestButton
+            // 
+            QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.Location = new Point(1312, 923);
+            QuestButton.Name = "QuestButton";
+            QuestButton.Size = new Size(100, 50);
+            QuestButton.TabIndex = 66;
+            QuestButton.TabStop = false;
+            QuestButton.Click += pictureBox60_Click;
+            // 
+            // Box
+            // 
+            Box.BackColor = Color.Transparent;
+            Box.BackgroundImage = (Image)resources.GetObject("Box.BackgroundImage");
+            Box.BackgroundImageLayout = ImageLayout.Stretch;
+            Box.Controls.Add(Dialogue);
+            Box.Location = new Point(418, 833);
+            Box.Name = "Box";
+            Box.Size = new Size(603, 153);
+            Box.TabIndex = 79;
+            // 
+            // Dialogue
+            // 
+            Dialogue.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Dialogue.ForeColor = Color.White;
+            Dialogue.Location = new Point(75, 48);
+            Dialogue.Name = "Dialogue";
+            Dialogue.Size = new Size(454, 80);
+            Dialogue.TabIndex = 0;
+            Dialogue.Text = "label2";
+            Dialogue.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // CrestfallCityForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1264,6 +1309,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(Box);
+            Controls.Add(QuestButton);
             Controls.Add(Shop);
             Controls.Add(OPEN);
             Controls.Add(panel1);
@@ -1320,9 +1367,9 @@
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox7);
-            Controls.Add(mob2);
+            Controls.Add(mob3);
             Controls.Add(pictureBox8);
-            Controls.Add(SideQuest);
+            Controls.Add(mob2);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
@@ -1341,9 +1388,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SideQuest).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)mob2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mob3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -1425,6 +1472,8 @@
             ((System.ComponentModel.ISupportInitialize)sell3).EndInit();
             ((System.ComponentModel.ISupportInitialize)sell2).EndInit();
             ((System.ComponentModel.ISupportInitialize)sell1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QuestButton).EndInit();
+            Box.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1436,9 +1485,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
-        private PictureBox SideQuest;
-        private PictureBox pictureBox8;
         private PictureBox mob2;
+        private PictureBox pictureBox8;
+        private PictureBox mob3;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
@@ -1540,5 +1589,9 @@
         private PictureBox sell2;
         private PictureBox sell1;
         private Label Buy;
+        private PictureBox QuestButton;
+        private Panel Box;
+        private Label Dialogue;
+        private System.Windows.Forms.Timer timer1;
     }
 }

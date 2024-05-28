@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JuraForestForm6));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -120,6 +121,7 @@
             sell1 = new PictureBox();
             Buy = new Label();
             OPEN = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -1071,6 +1073,10 @@
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // JuraForestForm6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1297,5 +1303,6 @@
         private PictureBox sell1;
         private Label Buy;
         private Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
