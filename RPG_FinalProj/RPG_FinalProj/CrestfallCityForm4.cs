@@ -17,9 +17,9 @@ namespace RPG_FinalProj
         private readonly quest1Dialogue dialogues;
         int[,] obstacles = new int[24, 4];
         PictureBox[] obstacle = new PictureBox[24];
-        PictureBox[] mob = new PictureBox[1];
-        int[,] moblocation = new int[1, 4];
-        string[] mobnames = new string[1];
+        PictureBox[] mob = new PictureBox[2];
+        int[,] moblocation = new int[2, 4];
+        string[] mobnames = new string[2];
         Label[] itemlb = new Label[9];
         PictureBox[] item = new PictureBox[9];
         private Image[] assets = new Image[21];

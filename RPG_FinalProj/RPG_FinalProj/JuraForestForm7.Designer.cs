@@ -838,6 +838,8 @@
             // QuestButton
             // 
             QuestButton.BackColor = Color.AliceBlue;
+            QuestButton.BackgroundImage = Properties.Resources.Hover2;
+            QuestButton.BackgroundImageLayout = ImageLayout.Stretch;
             QuestButton.Location = new Point(2, 588);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);

@@ -311,7 +311,7 @@
             // 
             // Quest
             // 
-            Quest.BackColor = Color.Red;
+            Quest.BackColor = Color.Transparent;
             Quest.Location = new Point(1192, 164);
             Quest.Name = "Quest";
             Quest.Size = new Size(100, 89);

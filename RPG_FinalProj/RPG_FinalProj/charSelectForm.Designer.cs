@@ -60,6 +60,7 @@
             // 
             // saveButton
             // 
+            saveButton.BackgroundImage = Properties.Resources.Hover1;
             saveButton.BackgroundImageLayout = ImageLayout.Stretch;
             saveButton.Location = new Point(290, 737);
             saveButton.Name = "saveButton";

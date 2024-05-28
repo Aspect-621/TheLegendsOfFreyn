@@ -453,6 +453,16 @@ namespace RPG_FinalProj.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap collect {
+            get {
+                object obj = ResourceManager.GetObject("collect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap goblin_idle {
             get {
                 object obj = ResourceManager.GetObject("goblin-idle", resourceCulture);
@@ -486,6 +496,36 @@ namespace RPG_FinalProj.Properties {
         internal static System.Drawing.Bitmap Hover {
             get {
                 object obj = ResourceManager.GetObject("Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover1 {
+            get {
+                object obj = ResourceManager.GetObject("Hover1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover2 {
+            get {
+                object obj = ResourceManager.GetObject("Hover2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover3 {
+            get {
+                object obj = ResourceManager.GetObject("Hover3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -626,6 +666,36 @@ namespace RPG_FinalProj.Properties {
         internal static System.Drawing.Bitmap skeleton_idle {
             get {
                 object obj = ResourceManager.GetObject("skeleton-idle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slimeKing_attack2 {
+            get {
+                object obj = ResourceManager.GetObject("slimeKing-attack2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slimeKing_attack21 {
+            get {
+                object obj = ResourceManager.GetObject("slimeKing-attack21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slimeKingAttack {
+            get {
+                object obj = ResourceManager.GetObject("slimeKingAttack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

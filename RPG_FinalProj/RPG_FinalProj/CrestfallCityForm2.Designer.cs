@@ -157,6 +157,7 @@
             label3 = new Label();
             label4 = new Label();
             label11 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -303,7 +304,7 @@
             // mob2
             // 
             mob2.AccessibleName = "Crest1";
-            mob2.BackColor = Color.Red;
+            mob2.BackColor = Color.Transparent;
             mob2.Location = new Point(593, 261);
             mob2.Name = "mob2";
             mob2.Size = new Size(234, 90);
@@ -321,7 +322,7 @@
             // mob3
             // 
             mob3.AccessibleName = "";
-            mob3.BackColor = Color.Red;
+            mob3.BackColor = Color.Transparent;
             mob3.Location = new Point(1289, 164);
             mob3.Name = "mob3";
             mob3.Size = new Size(35, 35);
@@ -787,7 +788,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(341, 186);
+            panel1.Location = new Point(362, 282);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 75;
@@ -1284,7 +1285,9 @@
             // 
             // QuestButton
             // 
-            QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.BackColor = Color.Transparent;
+            QuestButton.BackgroundImage = Properties.Resources.Hover3;
+            QuestButton.BackgroundImageLayout = ImageLayout.Stretch;
             QuestButton.Location = new Point(1312, 923);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);
@@ -1483,6 +1486,16 @@
             label11.TabIndex = 11;
             label11.Text = "USE ITEM";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(613, 302);
+            label5.Name = "label5";
+            label5.Size = new Size(198, 23);
+            label5.TabIndex = 81;
+            label5.Text = "Quest Available!";
+            // 
             // CrestfallCityForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1490,6 +1503,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1424, 985);
+            Controls.Add(label5);
             Controls.Add(panel2);
             Controls.Add(Box);
             Controls.Add(QuestButton);
@@ -1661,6 +1675,7 @@
             ((System.ComponentModel.ISupportInitialize)Health).EndInit();
             ((System.ComponentModel.ISupportInitialize)Idle).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1792,5 +1807,6 @@
         private Label label3;
         private Label label4;
         private Label label11;
+        private Label label5;
     }
 }

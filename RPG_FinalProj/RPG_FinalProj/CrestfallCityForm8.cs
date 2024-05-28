@@ -577,14 +577,14 @@ namespace RPG_FinalProj
                 {
                     if (Program.dialogues.Crest3 < 5)
                     {
-                        MessageBox.Show("completer the objective first");
+                        MessageBox.Show("Complete the objective first");
                     }
                     else
                     {
                         currentText = dialogues.CCSQ3();
                         Program.dialogues.CSQ3++;
                         Program.dialogues.currentQuest = "Crest3";
-                        MessageBox.Show("Tapos na yung quest");
+                        MessageBox.Show("Quest is already finished!");
                     }
                 }
                 else

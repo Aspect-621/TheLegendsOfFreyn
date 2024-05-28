@@ -150,7 +150,7 @@
             // EnemyPic
             // 
             EnemyPic.BackColor = Color.Transparent;
-            EnemyPic.Image = Properties.Resources.ogre_idle;
+            EnemyPic.Image = Properties.Resources.slimeKingAttack;
             EnemyPic.Location = new Point(594, 25);
             EnemyPic.Name = "EnemyPic";
             EnemyPic.Size = new Size(165, 177);

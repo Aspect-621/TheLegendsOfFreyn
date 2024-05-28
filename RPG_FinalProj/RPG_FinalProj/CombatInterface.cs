@@ -180,7 +180,7 @@ namespace RPG_FinalProj
                 {
                     mobstats[x] = random.Next(80,85);
                     mobHealth = mobstats[6] * 10 + 300;
-                    EnemyPic.Image = Properties.Resources.GreenSlime_idle;
+                    EnemyPic.Image = Properties.Resources.slimeKingAttack;
                     EnemyPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
@@ -360,14 +360,21 @@ namespace RPG_FinalProj
         {
             if (Program.items.playerHealth < 0)
             {
-                MessageBox.Show("You Lost");
+                MessageBox.Show("\tYou Lost! \n\nRespawning in Jura Forest Village...");
+                JuraForestForm7 JJF = new JuraForestForm7();
+                Program.items.location[0] = 720;
+                Program.items.location[1] = 100;
+                this.Hide();
+                JJF.ShowDialog();
+                this.Close();
                 Program.items.winorlose = 0;
+
             }
 
             if (mobHealth < 0)
             {
                 Program.items.winorlose = 1;
-                MessageBox.Show("You won");
+                MessageBox.Show("You won!");
                 this.Hide();
                 forms[Program.items.currentForm].ShowDialog();
                 this.Close();

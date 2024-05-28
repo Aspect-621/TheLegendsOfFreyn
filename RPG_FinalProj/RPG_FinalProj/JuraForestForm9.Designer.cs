@@ -373,10 +373,12 @@
             // mob3
             // 
             mob3.AccessibleName = "Slime King";
-            mob3.BackColor = Color.Red;
+            mob3.BackColor = Color.Transparent;
+            mob3.Image = (Image)resources.GetObject("mob3.Image");
             mob3.Location = new Point(770, 340);
             mob3.Name = "mob3";
             mob3.Size = new Size(180, 162);
+            mob3.SizeMode = PictureBoxSizeMode.StretchImage;
             mob3.TabIndex = 26;
             mob3.TabStop = false;
             // 

@@ -371,7 +371,7 @@
             // mob3
             // 
             mob3.AccessibleName = "Puzzle1";
-            mob3.BackColor = SystemColors.ActiveCaption;
+            mob3.BackColor = Color.Transparent;
             mob3.Location = new Point(1024, 449);
             mob3.Name = "mob3";
             mob3.Size = new Size(216, 265);

@@ -1003,9 +1003,11 @@
             // QuestButton
             // 
             QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.Image = (Image)resources.GetObject("QuestButton.Image");
             QuestButton.Location = new Point(1312, 923);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);
+            QuestButton.SizeMode = PictureBoxSizeMode.StretchImage;
             QuestButton.TabIndex = 83;
             QuestButton.TabStop = false;
             QuestButton.Click += QuestButton_Click;
@@ -1260,7 +1262,7 @@
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
             Name = "CrestfallCityForm8";
-            Text = "dd";
+            Text = "CrestfallCityForm8";
             Load += CrestfallCityForm8_Load;
             KeyDown += CrestfallCity_KeyDown_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

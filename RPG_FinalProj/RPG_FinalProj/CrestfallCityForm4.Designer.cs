@@ -337,7 +337,7 @@
             // mob2
             // 
             mob2.AccessibleName = "Crest2";
-            mob2.BackColor = Color.Red;
+            mob2.BackColor = Color.White;
             mob2.Location = new Point(704, 403);
             mob2.Name = "mob2";
             mob2.Size = new Size(67, 50);
@@ -402,7 +402,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 189);
+            panel1.Location = new Point(461, 220);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 77;
@@ -662,9 +662,11 @@
             // QuestButton
             // 
             QuestButton.BackColor = SystemColors.ActiveCaptionText;
+            QuestButton.Image = Properties.Resources.collect;
             QuestButton.Location = new Point(1312, 923);
             QuestButton.Name = "QuestButton";
             QuestButton.Size = new Size(100, 50);
+            QuestButton.SizeMode = PictureBoxSizeMode.StretchImage;
             QuestButton.TabIndex = 78;
             QuestButton.TabStop = false;
             QuestButton.Click += QuestButton_Click;
