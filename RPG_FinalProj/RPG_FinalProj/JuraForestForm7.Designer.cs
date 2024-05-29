@@ -333,7 +333,7 @@
             // 
             pictureBox18.Location = new Point(948, 44);
             pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(100, 126);
+            pictureBox18.Size = new Size(100, 114);
             pictureBox18.TabIndex = 18;
             pictureBox18.TabStop = false;
             // 
@@ -347,9 +347,9 @@
             // 
             // pictureBox20
             // 
-            pictureBox20.Location = new Point(1050, 365);
+            pictureBox20.Location = new Point(1063, 365);
             pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(171, 78);
+            pictureBox20.Size = new Size(158, 78);
             pictureBox20.TabIndex = 20;
             pictureBox20.TabStop = false;
             // 
@@ -578,7 +578,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(449, 189);
+            panel1.Location = new Point(418, 169);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 62;
@@ -589,7 +589,7 @@
             select1.AutoSize = true;
             select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             select1.ForeColor = Color.Black;
-            select1.Location = new Point(231, 91);
+            select1.Location = new Point(269, 159);
             select1.Name = "select1";
             select1.Size = new Size(58, 19);
             select1.TabIndex = 23;
@@ -828,9 +828,12 @@
             // 
             // OPEN
             // 
+            OPEN.BackColor = Color.Transparent;
+            OPEN.Image = (Image)resources.GetObject("OPEN.Image");
             OPEN.Location = new Point(1337, 12);
             OPEN.Name = "OPEN";
             OPEN.Size = new Size(75, 75);
+            OPEN.SizeMode = PictureBoxSizeMode.CenterImage;
             OPEN.TabIndex = 63;
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;

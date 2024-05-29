@@ -266,7 +266,7 @@ namespace RPG_FinalProj
         int lastkey;
         private void JuraForestForm1_KeyDown_1(object sender, KeyEventArgs e)
         {
-            
+
             int leftPosition, topPosition, rightPosition, bottomPosition;
             int[] movement = { 0, 0, 0, 0 };
             leftPosition = Player.Location.X;
@@ -545,6 +545,11 @@ namespace RPG_FinalProj
             Stat4.Text = Program.items.playerstats[6].ToString();
             Stat5.Text = Program.items.playerstats[7].ToString();
             GoldPrint.Text = Program.items.gold.ToString();
+        }
+
+        private void select1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

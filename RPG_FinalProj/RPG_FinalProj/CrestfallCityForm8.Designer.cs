@@ -516,7 +516,7 @@
             select1.AutoSize = true;
             select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             select1.ForeColor = Color.Black;
-            select1.Location = new Point(231, 91);
+            select1.Location = new Point(271, 159);
             select1.Name = "select1";
             select1.Size = new Size(58, 19);
             select1.TabIndex = 23;
@@ -755,9 +755,12 @@
             // 
             // OPEN
             // 
+            OPEN.BackColor = Color.Transparent;
+            OPEN.Image = (Image)resources.GetObject("OPEN.Image");
             OPEN.Location = new Point(1337, 12);
             OPEN.Name = "OPEN";
             OPEN.Size = new Size(75, 75);
+            OPEN.SizeMode = PictureBoxSizeMode.CenterImage;
             OPEN.TabIndex = 80;
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;
@@ -1041,9 +1044,12 @@
             // mob4
             // 
             mob4.AccessibleName = "Crest3";
+            mob4.BackColor = Color.Transparent;
+            mob4.Image = Properties.Resources.shieldYellow_removebg_preview;
             mob4.Location = new Point(223, 576);
             mob4.Name = "mob4";
             mob4.Size = new Size(35, 35);
+            mob4.SizeMode = PictureBoxSizeMode.StretchImage;
             mob4.TabIndex = 85;
             mob4.TabStop = false;
             // 

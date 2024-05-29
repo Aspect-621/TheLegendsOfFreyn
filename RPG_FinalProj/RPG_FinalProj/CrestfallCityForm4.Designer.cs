@@ -337,10 +337,12 @@
             // mob2
             // 
             mob2.AccessibleName = "Crest2";
-            mob2.BackColor = Color.White;
+            mob2.BackColor = Color.Transparent;
+            mob2.Image = Properties.Resources.shield_removebg_preview;
             mob2.Location = new Point(704, 403);
             mob2.Name = "mob2";
-            mob2.Size = new Size(67, 50);
+            mob2.Size = new Size(35, 35);
+            mob2.SizeMode = PictureBoxSizeMode.StretchImage;
             mob2.TabIndex = 23;
             mob2.TabStop = false;
             // 
@@ -402,7 +404,7 @@
             panel1.Controls.Add(item3);
             panel1.Controls.Add(item2);
             panel1.Controls.Add(item1);
-            panel1.Location = new Point(461, 220);
+            panel1.Location = new Point(428, 282);
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 607);
             panel1.TabIndex = 77;
@@ -413,7 +415,7 @@
             select1.AutoSize = true;
             select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             select1.ForeColor = Color.Black;
-            select1.Location = new Point(231, 91);
+            select1.Location = new Point(271, 159);
             select1.Name = "select1";
             select1.Size = new Size(58, 19);
             select1.TabIndex = 23;
@@ -652,9 +654,12 @@
             // 
             // OPEN
             // 
+            OPEN.BackColor = Color.Transparent;
+            OPEN.Image = (Image)resources.GetObject("OPEN.Image");
             OPEN.Location = new Point(1337, 12);
             OPEN.Name = "OPEN";
             OPEN.Size = new Size(75, 75);
+            OPEN.SizeMode = PictureBoxSizeMode.CenterImage;
             OPEN.TabIndex = 77;
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;

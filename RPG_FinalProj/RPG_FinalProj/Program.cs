@@ -16,6 +16,7 @@ namespace RPG_FinalProj
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new charSelectForm());
+
         }
     }
 }

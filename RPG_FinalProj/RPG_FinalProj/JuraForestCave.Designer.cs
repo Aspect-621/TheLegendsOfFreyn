@@ -557,9 +557,12 @@
             // 
             // OPEN
             // 
+            OPEN.BackColor = Color.Transparent;
+            OPEN.Image = (Image)resources.GetObject("OPEN.Image");
             OPEN.Location = new Point(1337, 12);
             OPEN.Name = "OPEN";
             OPEN.Size = new Size(75, 75);
+            OPEN.SizeMode = PictureBoxSizeMode.CenterImage;
             OPEN.TabIndex = 66;
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;

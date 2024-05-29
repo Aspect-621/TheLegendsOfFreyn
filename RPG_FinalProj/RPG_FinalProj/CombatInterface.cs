@@ -364,6 +364,7 @@ namespace RPG_FinalProj
                 JuraForestForm7 JJF = new JuraForestForm7();
                 Program.items.location[0] = 720;
                 Program.items.location[1] = 100;
+                Program.items.playerHealth = Program.items.Maxhealth;
                 this.Hide();
                 JJF.ShowDialog();
                 this.Close();

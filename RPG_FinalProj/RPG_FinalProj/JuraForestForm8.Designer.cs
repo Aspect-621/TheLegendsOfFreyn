@@ -559,7 +559,7 @@
             select1.AutoSize = true;
             select1.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             select1.ForeColor = Color.Black;
-            select1.Location = new Point(231, 91);
+            select1.Location = new Point(271, 159);
             select1.Name = "select1";
             select1.Size = new Size(58, 19);
             select1.TabIndex = 23;
@@ -798,9 +798,12 @@
             // 
             // OPEN
             // 
+            OPEN.BackColor = Color.Transparent;
+            OPEN.Image = (Image)resources.GetObject("OPEN.Image");
             OPEN.Location = new Point(1337, 12);
             OPEN.Name = "OPEN";
             OPEN.Size = new Size(75, 75);
+            OPEN.SizeMode = PictureBoxSizeMode.CenterImage;
             OPEN.TabIndex = 64;
             OPEN.TabStop = false;
             OPEN.Click += OPEN_Click;
@@ -996,7 +999,7 @@
             panel3.Controls.Add(pictureBox38);
             panel3.Controls.Add(Timer);
             panel3.Controls.Add(Counter);
-            panel3.Location = new Point(419, 100);
+            panel3.Location = new Point(430, 150);
             panel3.Name = "panel3";
             panel3.Size = new Size(550, 550);
             panel3.TabIndex = 64;
